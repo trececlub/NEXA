@@ -1,0 +1,87 @@
+/* =============================
+   NEXA — Home (index.html) CSS
+   ============================= */
+:root{
+  --bg:#0b0b0f;          /* fondo principal */
+  --card:#13131a;        /* tarjetas */
+  --card-2:#171722;      /* variante */
+  --text:#f1f2f6;        /* texto */
+  --muted:#a1a3ad;       /* texto secundario */
+  --line:#20202a;        /* bordes sutiles */
+  --accent-1:#7c5cff;    /* acento gradient */
+  --accent-2:#14d1d1;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius: 16px; --radius-lg: 24px; --maxw: 1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:
+    radial-gradient(1200px 800px at 100% -10%, rgba(124,92,255,.12), transparent),
+    radial-gradient(900px 600px at -10% 0%, rgba(20,209,209,.10), transparent),
+    var(--bg);
+  color:var(--text); font: 400 16px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+.container{width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:20px}
+
+/* Accesibilidad */
+.skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+.skip:focus{left:12px; top:12px; width:auto; height:auto; padding:10px 12px; border-radius:10px; background:#000; border:1px solid var(--line)}
+:focus-visible{outline:2px solid var(--accent-2); outline-offset:2px}
+
+/* Header */
+header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(8px);
+  background:linear-gradient(180deg, rgba(11,11,15,.85), rgba(11,11,15,.35) 70%, rgba(11,11,15,0)); border-bottom:1px solid var(--line)}
+.nav{display:flex; align-items:center; justify-content:space-between; height:70px}
+.brand{display:flex; align-items:center; gap:12px}
+.logo{width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg, var(--accent-1), var(--accent-2)); box-shadow:0 8px 20px rgba(124,92,255,.35)}
+.wordmark{font-weight:800; letter-spacing:.12em}
+.wordmark span{background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+nav ul{display:flex; gap:22px; list-style:none; margin:0; padding:0}
+.nav a{opacity:.9}
+.nav a:hover{opacity:1}
+.nav a.active{opacity:1; position:relative}
+.nav a.active::after{content:""; position:absolute; left:0; right:0; bottom:-10px; height:2px; background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); border-radius:2px}
+.cta .btn{margin-left:12px}
+
+.menu-btn{display:none}
+.mobile-nav{display:none; border-top:1px solid var(--line); background:#0e0e14}
+.mobile-nav a{display:block; padding:14px 20px; border-bottom:1px solid var(--line)}
+
+/* Botones */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:.8rem 1.2rem; border-radius:999px; border:1px solid var(--line); background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); box-shadow:var(--shadow); transition:.2s transform, .2s box-shadow, .2s background; font-weight:600}
+.btn:hover{transform:translateY(-1px); box-shadow:0 12px 28px rgba(0,0,0,.4)}
+.btn.primary{border:0; background:linear-gradient(135deg, var(--accent-1), var(--accent-2)); color:#0b0b0f}
+
+/* Hero minimal */
+.hero{padding:86px 0 40px}
+.kicker{display:inline-block; padding:.3rem .8rem; border:1px solid var(--line); border-radius:999px; font-size:.82rem; color:var(--muted)}
+.title{margin:.8rem 0 .6rem; font-size:clamp(34px, 6vw, 60px); line-height:1.06; font-weight:900}
+.title .grad{background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.subtitle{color:var(--muted); font-size:1.1rem; max-width:58ch}
+
+section{padding:72px 0}
+.section-title{font-size:1.9rem; margin:0 0 12px}
+.section-sub{color:var(--muted); margin:0 0 28px}
+
+/* Quiénes somos */
+.about{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center}
+.about .panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:24px}
+.about .panel h3:first-child{margin-top:0}
+.about .bullets{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px}
+.chip{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; background:var(--card-2); border:1px solid var(--line); border-radius:999px; font-size:.92rem; color:var(--muted)}
+
+/* Servicios (3 tarjetas) */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:var(--radius); padding:20px; min-height:160px; position:relative; overflow:hidden}
+.card:after{content:""; position:absolute; inset:auto -40% -40% auto; width:180px; height:180px; border-radius:50%; background:radial-gradient(closest-side, rgba(124,92,255,.3), transparent); filter:blur(20px); transform:translate(20px, 20px)}
+.card h3{margin:0 0 8px}
+.card p{margin:0; color:var(--muted)}
+
+/* Galería */
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.tile{aspect-ratio: 4/3; border-radius:16px; overflow:hidden; position:relative; border:1px solid var(--line); background:var(--card)}
+.ph{position:absolute; inset:
