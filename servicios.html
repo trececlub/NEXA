@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEXA — Servicios</title>
+  <meta name="description" content="Qué hacemos en NEXA: diseño web, software a medida y branding. Servicios modulares orientados a resultados." />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0b0b0f" />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="NEXA — inicio">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="wordmark">NE<span class="grad">XA</span></div>
+      </a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
+        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Intro / Qué hacemos -->
+    <section class="hero">
+      <div class="container">
+        <span class="kicker">Servicios</span>
+        <h1 class="title">Qué hacemos en <span class="grad">NEXA</span></h1>
+        <p class="subtitle">Diseñamos y construimos experiencias que generan resultados medibles. Desde el concepto de marca hasta un sitio veloz y un sistema a medida para tu operación.</p>
+      </div>
+    </section>
+
+    <!-- 3 servicios principales -->
+    <section id="servicios">
+      <div class="container">
+        <h2 class="section-title">Servicios principales</h2>
+        <p class="section-sub">Elige un módulo o combínalos según tu objetivo.</p>
+        <div class="grid-3">
+          <!-- Diseño Web -->
+          <article class="card" aria-labelledby="svc-web-title">
+            <h3 id="svc-web-title">Diseño web</h3>
+            <p>Sitios modernos, rápidos y accesibles, optimizados para convertir.</p>
+            <ul>
+              <li>UI/UX, responsive y performance (Core Web Vitals).</li>
+              <li>SEO técnico, mapas de sitio y metadatos.</li>
+              <li>Integraciones (analytics, formularios, chat, pagos).</li>
+              <li>Deploy con SSL y DNS correctos (GitHub Pages, Vercel u otros).</li>
+            </ul>
+            <p><a class="btn" href="contacto.html?servicio=diseño-web">Solicitar propuesta</a></p>
+          </article>
+
+          <!-- Software a medida -->
+          <article class="card" aria-labelledby="svc-soft-title">
+            <h3 id="svc-soft-title">Software a medida</h3>
+            <p>Herramientas personalizadas para tu flujo: paneles, APIs e integraciones.</p>
+            <ul>
+              <li>Dashboards y back‑office para gestión interna.</li>
+              <li>Automatizaciones e integración con terceros (APIs).</li>
+              <li>Prototipo → MVP → Producción con pruebas y documentación.</li>
+              <li>Soporte y evolución continua.</li>
+            </ul>
+            <p><a class="btn" href="contacto.html?servicio=software-a-medida">Solicitar propuesta</a></p>
+          </article>
+
+          <!-- Branding -->
+          <article class="card" aria-labelledby="svc-brand-title">
+            <h3 id="svc-brand-title">Branding</h3>
+            <p>Identidades que comunican y conectan. Coherencia en cada punto de contacto.</p>
+            <ul>
+              <li>Naming, identidad visual y sistema gráfico.</li>
+              <li>Brandbook, usos correctos y kit de aplicaciones.</li>
+              <li>Plantillas para redes y presentaciones.</li>
+              <li>Mockups y guías para implementación.</li>
+            </ul>
+            <p><a class="btn" href="contacto.html?servicio=branding">Solicitar propuesta</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> NEXA. Todos los derechos reservados.</div>
+      <div style="display:flex; gap:12px">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <span>·</span>
+        <a href="#" aria-label="Behance">Behance</a>
+        <span>·</span>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      const open = mobileNav.style.display === 'block';
+      mobileNav.style.display = open ? 'none' : 'block';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+    });
+    mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.style.display='none'));
+  </script>
+</body>
+</html>
