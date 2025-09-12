@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>NEXA — Contacto</title>
   <meta name="description" content="Contacto NEXA: cuéntanos tu proyecto. Formulario, WhatsApp e Instagram." />
   <link rel="stylesheet" href="style.css" />
@@ -10,6 +10,7 @@
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
+
   <header>
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="NEXA — inicio">
@@ -19,7 +20,7 @@
       <nav aria-label="Principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
           <li><a class="active" href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -41,17 +42,16 @@
       <div class="container">
         <span class="kicker">Contacto</span>
         <h1 class="title">Cuéntanos tu proyecto</h1>
-        <p class="subtitle">Responde en breve: solemos contestar el mismo día hábil. También puedes escribirnos por WhatsApp o Instagram.</p>
+        <p class="subtitle">Respondemos en breve. También puedes escribirnos por WhatsApp o Instagram.</p>
       </div>
     </section>
 
-    <!-- Bloque de contacto reutilizando layout de "about" -->
+    <!-- Bloque de contacto -->
     <section id="formulario">
-      <div class="container about">
+      <div class="container about contact-grid">
         <!-- Columna izquierda: formulario -->
         <div class="panel">
           <h2 class="section-title" style="margin-top:0">Formulario</h2>
-          <!-- Nota: si prefieres backend (Formspree/AppScript) te lo conecto luego. -->
           <form id="contactForm" aria-label="Formulario de contacto">
             <label for="nombre">Nombre</label>
             <input id="nombre" name="nombre" placeholder="Tu nombre" required />
@@ -60,7 +60,7 @@
             <input id="email" name="email" type="email" placeholder="tunombre@empresa.com" required />
 
             <label for="telefono">Teléfono (opcional)</label>
-            <input id="telefono" name="telefono" type="tel" placeholder="Ej. +57 3XX XXX XXXX" />
+            <input id="telefono" name="telefono" type="tel" placeholder="+57 315 983 6331" />
 
             <label for="servicio">Servicio de interés</label>
             <select id="servicio" name="servicio" required>
@@ -76,9 +76,15 @@
             <div class="contact-actions">
               <button class="btn primary" type="submit">Enviar</button>
               <button class="btn" type="button" id="btnWhatsApp">WhatsApp</button>
-              <a class="btn" id="btnInstagram" href="https://instagram.com/tu_instagram" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+              <a
+                class="btn"
+                id="btnInstagram"
+                href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >Instagram</a>
             </div>
-            <p class="note">* Reemplaza <b>tu_instagram</b> y el número de WhatsApp en el código por tus datos reales.</p>
           </form>
         </div>
 
@@ -87,11 +93,16 @@
           <h3 style="margin-top:0">Contacto directo</h3>
           <p>Si prefieres, escríbenos directamente por WhatsApp o Instagram. También puedes enviar un correo.</p>
           <div class="social-links">
-            <a class="btn" id="https://wa.me/573159836331?text=Hola%20%C2%BFpodemos%20hablar%3F" href="#">WhatsApp</a>
-            <a class="btn" href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn" id="waLinkSide" href="#">WhatsApp</a>
+            <a
+              class="btn"
+              href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr"
+              target="_blank"
+              rel="noopener"
+            >Instagram</a>
             <a class="btn" href="mailto:hola@nexa.studio?subject=Contacto%20NEXA">Email</a>
           </div>
-          <p class="note">WhatsApp: <code id="waNumberLabel"> +57 315 983 6331</code></p>
+          <p class="note">WhatsApp: <code id="waNumberLabel">+57 315 983 6331</code></p>
         </div>
       </div>
     </section>
@@ -101,7 +112,7 @@
     <div class="container footer-inner">
       <div>© <span id="year"></span> NEXA. Todos los derechos reservados.</div>
       <div style="display:flex; gap:12px">
-        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         <span>·</span>
         <a href="#" aria-label="Behance">Behance</a>
         <span>·</span>
@@ -114,72 +125,53 @@
     // Año en footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Menú móvil
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    menuBtn?.addEventListener('click', () => {
-      const open = mobileNav.style.display === 'block';
-      mobileNav.style.display = open ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!open));
-    });
-    mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.style.display='none'));
-
-    // Helpers
-    function getParam(name){
-      const params = new URLSearchParams(window.location.search);
-      return params.get(name) || '';
-    }
-    function encode(str){ return encodeURIComponent(str || ''); }
+    // --- Utilidades ---
+    const getParam = (name) => new URLSearchParams(window.location.search).get(name) || '';
+    const enc = (s) => encodeURIComponent(s || '');
 
     // Prefill servicio desde ?servicio=
     const svc = getParam('servicio');
-    if(svc){
+    if (svc) {
       const select = document.getElementById('servicio');
-      if(select && Array.from(select.options).some(o => o.value === svc)){
+      if (select && Array.from(select.options).some(o => o.value === svc)) {
         select.value = svc;
       }
     }
 
-    // Mailto en submit (placeholder de correo)
+    // Envío por mailto
     const form = document.getElementById('contactForm');
-    form?.addEventListener('submit', (e)=>{
+    form?.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = new FormData(form);
-      const nombre = data.get('nombre');
-      const email = data.get('email');
-      const telefono = data.get('telefono');
-      const servicio = data.get('servicio');
-      const mensaje = data.get('mensaje');
-      const subject = `Contacto NEXA — ${servicio || 'general'}`;
-      const body = `Nombre: ${encode(nombre)}%0AEmail: ${encode(email)}%0ATeléfono: ${encode(telefono)}%0AServicio: ${encode(servicio)}%0AMensaje:%0A${encode(mensaje)}`;
-      window.location.href = `mailto:hola@nexa.studio?subject=${encode(subject)}&body=${body}`;
+      const subject = `Contacto NEXA — ${data.get('servicio') || 'general'}`;
+      const body =
+        `Nombre: ${enc(data.get('nombre'))}%0A` +
+        `Email: ${enc(data.get('email'))}%0A` +
+        `Teléfono: ${enc(data.get('telefono'))}%0A` +
+        `Servicio: ${enc(data.get('servicio'))}%0A` +
+        `Mensaje:%0A${enc(data.get('mensaje'))}`;
+      window.location.href = `mailto:hola@nexa.studio?subject=${enc(subject)}&body=${body}`;
     });
 
-    // WhatsApp dinámico (reemplaza este número)
-    const WA_NUMBER = '57XXXXXXXXXX'; // <-- cambia por tu número con indicativo país
-    document.getElementById('waNumberLabel').textContent = WA_NUMBER;
+    // WhatsApp dinámico: número real
+    const WA_NUMBER = '573159836331'; // wa.me usa solo dígitos
+    const waLabel = document.getElementById('waNumberLabel');
+    if (waLabel) waLabel.textContent = '+57 315 983 6331';
 
-    function buildWaText(){
+    function buildWaText() {
       const data = new FormData(document.getElementById('contactForm'));
       const nombre = data.get('nombre') || '';
       const servicio = data.get('servicio') || '';
       const mensaje = data.get('mensaje') || '';
-      const text = `Hola NEXA, soy ${nombre}. Me interesa ${servicio}. ${mensaje}`.trim();
-      return encodeURIComponent(text);
+      return encodeURIComponent(`Hola NEXA, soy ${nombre}. Me interesa ${servicio}. ${mensaje}`.trim());
     }
-
-    const btnWA = document.getElementById('btnWhatsApp');
-    const waLinkSide = document.getElementById('waLinkSide');
-    function openWA(){
-      const t = buildWaText();
-      window.open(`https://wa.me/${WA_NUMBER}?text=${t}`, '_blank');
+    function openWA() {
+      window.open(`https://wa.me/${WA_NUMBER}?text=${buildWaText()}`, '_blank');
     }
-    btnWA?.addEventListener('click', openWA);
-    waLinkSide?.addEventListener('click', (e)=>{ e.preventDefault(); openWA(); });
-
-    // Instagram: setea tu usuario real
-    const ig = 'tu_instagram'; // <-- cambia por tu usuario
-    document.getElementById('btnInstagram').href = `https://instagram.com/${ig}`;
-<script src="script.js" defer></script>
+    document.getElementById('btnWhatsApp')?.addEventListener('click', openWA);
+    document.getElementById('waLinkSide')?.addEventListener('click', (e) => { e.preventDefault(); openWA(); });
+  </script>
+  <!-- Script común (menú móvil, scroll suave, fix 100vh iOS) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
