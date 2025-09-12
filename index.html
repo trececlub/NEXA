@@ -2,7 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
   <title>NEXA — Inicio</title>
   <meta name="description" content="NEXA: estudio creativo de branding, web/UI y contenido. Página de inicio con quiénes somos, servicios y galería." />
   <meta name="theme-color" content="#0b0b0f" />
@@ -10,12 +13,14 @@
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
+
   <header>
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="NEXA — inicio">
         <div class="logo" aria-hidden="true"></div>
         <div class="wordmark">NE<span class="grad">XA</span></div>
       </a>
+
       <nav aria-label="Principal">
         <ul>
           <li><a class="active" href="index.html">Inicio</a></li>
@@ -23,11 +28,14 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
+
       <div class="cta">
         <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
         <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
       </div>
     </div>
+
+    <!-- Menú móvil (overlay) -->
     <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
@@ -36,7 +44,7 @@
   </header>
 
   <main id="contenido">
-    <!-- Hero muy compacto para resaltar el propósito -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
         <span class="kicker">Estudio creativo</span>
@@ -118,28 +126,11 @@
     </div>
   </footer>
 
+  <!-- Año dinámico -->
   <script>
-    // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Menú móvil
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    menuBtn?.addEventListener('click', () => {
-      const open = mobileNav.style.display === 'block';
-      mobileNav.style.display = open ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!open));
-    });
-    mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.style.display='none'));
-
-    // Scroll suave links internos
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href');
-        const target = document.querySelector(id);
-        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-   <script src="script.js" defer></script>
+  </script>
+  <!-- Utilidades comunes (menú móvil, scroll suave, fix 100vh iOS) -->
+  <script src="script.js" defer></script>
 </body>
 </html>
