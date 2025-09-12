@@ -1,5 +1,6 @@
 /* =============================
-   NEXA — Global Styles (header sin sticky + menú desplegable)
+   NEXA — Site Styles (global)
+   Aplica a index.html, servicios.html y contacto.html
    ============================= */
 :root{
   --bg:#0b0b0f;          /* fondo principal */
@@ -32,12 +33,10 @@ img{max-width:100%; display:block}
 .skip:focus{left:12px; top:12px; width:auto; height:auto; padding:10px 12px; border-radius:10px; background:#000; border:1px solid var(--line)}
 :focus-visible{outline:2px solid var(--accent-2); outline-offset:2px}
 
-/* Header sin sticky */
+/* Header SIN sticky + solo menú desplegable */
 header{
-  position:static; /* antes sticky */
-  top:auto; z-index:auto; backdrop-filter:none;
-  background:var(--bg);
-  border-bottom:1px solid var(--line);
+  position:static; top:auto; z-index:auto; backdrop-filter:none;
+  background:var(--bg); border-bottom:1px solid var(--line);
 }
 .nav{display:flex; align-items:center; justify-content:space-between; height:70px}
 .brand{display:flex; align-items:center; gap:12px}
@@ -45,17 +44,15 @@ header{
 .wordmark{font-weight:800; letter-spacing:.12em}
 .wordmark span{background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
 
-/* Ocultamos el menú fijo (lista) en todos los tamaños */
+/* Ocultamos la lista fija del header en todos los tamaños */
 nav ul{display:none; gap:22px; list-style:none; margin:0; padding:0}
 .nav a{opacity:.9}
 .nav a:hover{opacity:1}
-.nav a.active{opacity:1; position:relative}
-.nav a.active::after{content:""; position:absolute; left:0; right:0; bottom:-10px; height:2px; background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); border-radius:2px}
 
-/* Mostramos el botón del menú desplegable siempre */
+/* Botón del menú siempre visible */
 .menu-btn{display:inline-flex}
 
-/* Menú desplegable como overlay */
+/* Menú desplegable tipo overlay */
 .mobile-nav{
   position:fixed; inset:70px 0 0 0; z-index:60; display:none;
   border-top:1px solid var(--line); background:#0e0e14; padding-bottom:24px;
@@ -95,15 +92,28 @@ section{padding:72px 0}
 /* Galería */
 .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
 .tile{aspect-ratio: 4/3; border-radius:16px; overflow:hidden; position:relative; border:1px solid var(--line); background:var(--card)}
-.ph{position:absolute; inset:0; background:
-  linear-gradient(135deg, rgba(124,92,255,.15), rgba(20,209,209,.15)),
-  radial-gradient(800px 400px at 0% 100%, rgba(124,92,255,.18), transparent),
-  linear-gradient(180deg, #191924, #101015)}
+.ph{
+  position:absolute; inset:0; background:
+    linear-gradient(135deg, rgba(124,92,255,.15), rgba(20,209,209,.15)),
+    radial-gradient(800px 400px at 0% 100%, rgba(124,92,255,.18), transparent),
+    linear-gradient(180deg, #191924, #101015);
+}
 .label{position:absolute; left:12px; bottom:12px; font-weight:600; background:rgba(0,0,0,.35); backdrop-filter:blur(6px); padding:.4rem .7rem; border-radius:10px; border:1px solid rgba(255,255,255,.08)}
 
 /* Footer */
 footer{padding:40px 0; border-top:1px solid var(--line); color:var(--muted)}
 .footer-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+/* Panel + Form (para contacto) */
+.panel{background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:24px}
+.contact-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:start}
+form{display:grid; gap:12px}
+label{font-weight:600}
+input, textarea, select{width:100%; background:#0f0f15; color:var(--text); border:1px solid var(--line); border-radius:12px; padding:12px 14px; outline:none}
+textarea{min-height:140px; resize:vertical}
+.note{color:var(--muted); font-size:.92rem}
+.contact-actions{display:flex; gap:12px; flex-wrap:wrap}
+.social-links{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
 
 /* =============================
    Mobile comfort pack — legibilidad y respiración
@@ -122,12 +132,22 @@ footer{padding:40px 0; border-top:1px solid var(--line); color:var(--muted)}
   .title{ font-size:clamp(32px, 7.5vw, 42px); }
   .subtitle{ font-size:1.05rem; }
   header .nav{ height:64px; }
-  /* tarjetas en columna */
+
+  /* Quiénes somos en 1 columna */
+  .about{ grid-template-columns:1fr; }
+  .about .bullets{ grid-template-columns:1fr; }
+
+  /* Tarjetas en vertical (1 columna) */
   .grid-3{ grid-template-columns:1fr; }
   .card{ padding:18px; }
-  /* galería en columna */
+
+  /* Galería en 1 columna (más aire) */
   .gallery{ grid-template-columns:1fr; gap:12px; }
   .tile{ aspect-ratio:1/1; }
   .label{ left:10px; bottom:10px; }
+
+  /* Contacto: columna única */
+  .contact-grid{ grid-template-columns:1fr; }
+
   .footer-inner{ gap:8px; }
 }
