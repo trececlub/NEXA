@@ -123,3 +123,29 @@ section{padding:72px 0}
   .label{ left:10px; bottom:10px; }
   .footer-inner{ gap:8px; }
 }
+/* ——— SOLO MÓVIL ——— */
+@media (max-width: 640px){
+  /* más aire y mejor lectura */
+  body{ font-size:17px; line-height:1.75; }
+  .container{ padding-inline:6vw; }
+  section{ padding:56px 0; }
+  .hero{ padding:72px 0 28px; }
+  .title{ font-size:clamp(32px, 7.5vw, 42px); }
+  .subtitle{ font-size:1.05rem; }
+
+  /* tarjetas en vertical */
+  .grid-3{ grid-template-columns:1fr; }
+  .card{ padding:18px; }
+
+  /* galería en vertical (1 columna) */
+  .gallery{ grid-template-columns:1fr; gap:12px; }
+  .tile{ aspect-ratio:1/1; } /* opcional: cuadradas para balance */
+}
+
+/* menú móvil como overlay y tap targets cómodos */
+.mobile-nav{
+  position:fixed; inset:70px 0 0 0; z-index:60; display:none;
+  border-top:1px solid var(--line); background:#0e0e14; padding-bottom:24px;
+}
+.mobile-nav a{ font-size:1.1rem; padding:16px 20px; }
+.btn{ min-height:44px; } /* altura mínima táctil */
