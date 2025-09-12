@@ -108,19 +108,7 @@
     </div>
   </footer>
 
-  <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Menú móvil
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    menuBtn?.addEventListener('click', () => {
-      const open = mobileNav.style.display === 'block';
-      mobileNav.style.display = open ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!open));
-    });
-    mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.style.display='none'));
-  <script src="script.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js" defer></script>
 </body>
 </html>
