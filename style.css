@@ -85,3 +85,41 @@ section{padding:72px 0}
 .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
 .tile{aspect-ratio: 4/3; border-radius:16px; overflow:hidden; position:relative; border:1px solid var(--line); background:var(--card)}
 .ph{position:absolute; inset:
+/* =============================
+   Mobile comfort pack — legibilidad y respiración
+   ============================= */
+/* Menú móvil como overlay (no empuja el layout) */
+.mobile-nav{
+  position:fixed; inset:70px 0 0 0; z-index:60; display:none;
+  border-top:1px solid var(--line); background:#0e0e14; padding-bottom:24px;
+}
+.mobile-nav a{ font-size:1.1rem; padding:16px 20px; }
+
+/* Botones: altura táctil mínima */
+.btn{ min-height:44px; }
+
+@media (max-width: 980px){
+  .hero{ padding:84px 0 36px; }
+  .section-title{ font-size:1.8rem; }
+  .gallery{ grid-template-columns:1fr 1fr; } /* 2 columnas en tablets/medianos */
+}
+
+@media (max-width: 640px){
+  body{ font-size:17px; line-height:1.75; }
+  .container{ padding-inline:6vw; }
+  section{ padding:56px 0; }
+  .hero{ padding:72px 0 28px; }
+  .title{ font-size:clamp(32px, 7.5vw, 42px); }
+  .subtitle{ font-size:1.05rem; }
+  header .nav{ height:64px; }
+  nav ul{ display:none; } .menu-btn{ display:inline-flex; }
+  .about{ grid-template-columns:1fr; }
+  .about .bullets{ grid-template-columns:1fr; }
+  .grid-3{ grid-template-columns:1fr; }
+  .card{ padding:18px; }
+  /* Galería en 2 columnas y formato 1:1 = balance visual y menos scroll */
+  .gallery{ grid-template-columns:1fr 1fr; gap:12px; }
+  .tile{ aspect-ratio:1/1; }
+  .label{ left:10px; bottom:10px; }
+  .footer-inner{ gap:8px; }
+}
