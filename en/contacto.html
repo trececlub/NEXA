@@ -17,29 +17,44 @@
   <a class="skip" href="#content">Skip to content</a>
 
   <header>
-    <div class="container nav">
-      <a class="brand" href="/en/" aria-label="NEXA — home">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="wordmark">NE<span class="grad">XA</span></div>
-      </a>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="/en/">Home</a></li>
-          <li><a href="/en/services.html">Services</a></li>
-          <li><a class="active" href="/en/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="cta">
-        <a class="btn primary" href="#content">Write to us</a>
-        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  <div class="container nav">
+    <a class="brand" href="/en/" aria-label="NEXA — home">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="wordmark">NE<span class="grad">XA</span></div>
+    </a>
+
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/services.html">Services</a></li>
+        <li><a class="active" href="/en/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="cta">
+      <a class="btn primary" href="/en/contact.html">Start a project</a>
+      <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+
+      <!-- Language switch -->
+      <div class="lang-switch" aria-label="Language selector">
+        <a class="lang-btn" data-lang="es" role="button">ES</a>
+        <a class="lang-btn" data-lang="en" role="button">EN</a>
       </div>
     </div>
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
-      <a href="/en/">Home</a>
-      <a href="/en/services.html">Services</a>
-      <a href="/en/contact.html">Contact</a>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="/en/">Home</a>
+    <a href="/en/services.html">Services</a>
+    <a href="/en/contact.html">Contact</a>
+
+    <!-- Switch inside mobile menu -->
+    <div class="lang-switch lang-mobile" aria-label="Language selector">
+      <a class="lang-btn" data-lang="es" role="button">ES</a>
+      <a class="lang-btn" data-lang="en" role="button">EN</a>
     </div>
-  </header>
+  </div>
+</header>
 
   <main id="content">
     <!-- Hero -->
