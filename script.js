@@ -79,3 +79,54 @@
   setVH();
   window.addEventListener('resize', setVH);
 })();
+// ===== Language switch logic =====
+(function(){
+  const mapES2EN = {
+    "/": "/en/",
+    "/index.html": "/en/",
+    "/servicios.html": "/en/services.html",
+    "/contacto.html": "/en/contact.html"
+  };
+  const mapEN2ES = {
+    "/en/": "/",
+    "/en/index.html": "/",
+    "/en/services.html": "/servicios.html",
+    "/en/contact.html": "/contacto.html"
+  };
+
+  function currentLang(){
+    return location.pathname.startsWith("/en/") ? "en" : "es";
+  }
+  function counterpartPath(target){
+    const p = location.pathname;
+    if(target === "en") return mapES2EN[p] || "/en/";
+    return mapEN2ES[p] || "/";
+  }
+  function markActive(){
+    const lang = currentLang();
+    document.querySelectorAll(".lang-btn").forEach(a=>{
+      a.setAttribute("aria-pressed", String(a.dataset.lang === lang));
+    });
+  }
+  function setHrefs(){
+    const hrefEN = counterpartPath("en");
+    const hrefES = counterpartPath("es");
+    document.querySelectorAll('.lang-btn[data-lang="en"]').forEach(a=>a.setAttribute("href", hrefEN));
+    document.querySelectorAll('.lang-btn[data-lang="es"]').forEach(a=>a.setAttribute("href", hrefES));
+  }
+
+  function init(){
+    markActive();
+    setHrefs();
+    // Guarda preferencia al hacer click (sin impedir la navegación)
+    document.querySelectorAll(".lang-btn").forEach(a=>{
+      a.addEventListener("click", ()=> {
+        try{ localStorage.setItem("langChoice", a.dataset.lang); }catch(e){}
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else { init(); }
+})();
