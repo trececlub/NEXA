@@ -15,33 +15,45 @@
   <a class="skip" href="#contenido">Saltar al contenido</a>
 
   <header>
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="NEXA — inicio">
-        <div class="logo" aria-hidden="true"></div>
-        <div class="wordmark">NE<span class="grad">XA</span></div>
-      </a>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="NEXA — inicio">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="wordmark">NE<span class="grad">XA</span></div>
+    </a>
 
-      <nav aria-label="Principal">
-        <ul>
-          <li><a class="active" href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a class="active" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
 
-      <div class="cta">
-        <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
-        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+    <div class="cta">
+      <a class="btn primary" href="#contenido">Escríbenos</a>
+      <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+
+      <!-- Selector de idioma -->
+      <div class="lang-switch" aria-label="Seleccionar idioma">
+        <a class="lang-btn" data-lang="es" role="button">ES</a>
+        <a class="lang-btn" data-lang="en" role="button">EN</a>
       </div>
     </div>
+  </div>
 
-    <!-- Menú móvil (overlay) -->
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+
+    <!-- Selector en menú móvil -->
+    <div class="lang-switch lang-mobile" aria-label="Seleccionar idioma">
+      <a class="lang-btn" data-lang="es" role="button">ES</a>
+      <a class="lang-btn" data-lang="en" role="button">EN</a>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <main id="contenido">
     <!-- Hero -->
