@@ -175,3 +175,8 @@ textarea{min-height:140px; resize:vertical}
   }
   .mobile-nav .lang-btn{flex:0 0 auto; min-width:48px}
 }
+/* En móvil, oculta el switch del header y deja solo el del menú móvil */
+@media (max-width: 640px){
+  .nav .lang-switch{ display:none; }   /* oculta el pill junto al CTA */
+  .lang-mobile{ display:flex; }        /* ya lo mostramos dentro del menú móvil */
+}
