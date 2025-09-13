@@ -149,5 +149,20 @@
   </script>
   <!-- Utilidades comunes (menú móvil, scroll suave, fix 100vh iOS) -->
   <script src="script.js" defer></script>
+  <script>
+(function(){
+  try{
+    if(!localStorage.getItem('langChoice')){
+      var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'es';
+      if(!/^es(\-|$)/i.test(nav)){          // si NO es español
+        localStorage.setItem('langChoice','en');
+        location.href = '/en/';             // redirige a la versión EN
+      }else{
+        localStorage.setItem('langChoice','es');
+      }
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
