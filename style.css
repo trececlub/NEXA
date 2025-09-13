@@ -180,3 +180,18 @@ textarea{min-height:140px; resize:vertical}
   .nav .lang-switch{ display:none; }   /* oculta el pill junto al CTA */
   .lang-mobile{ display:flex; }        /* ya lo mostramos dentro del menú móvil */
 }
+/* --- Language switch: solo en menú cuando es móvil --- */
+@media (max-width: 640px){
+  /* Oculta cualquier switch que esté en el header en móvil */
+  header .lang-switch{ 
+    display: none !important;
+  }
+
+  /* Muestra el switch del menú móvil */
+  .mobile-nav .lang-mobile{
+    display: flex !important;
+    gap: 8px;
+    padding: 10px 20px;
+    border-top: 1px solid var(--line);
+  }
+}
