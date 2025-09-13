@@ -1,129 +1,131 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  />
-  <title>NEXA — Inicio</title>
-  <meta name="description" content="NEXA: estudio creativo de branding, web/UI y contenido. Página de inicio con quiénes somos, servicios y galería." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>NEXA — Home</title>
+  <meta name="description" content="NEXA: creative studio for branding, web/UI and content. Home page with who we are, services and gallery." />
   <meta name="theme-color" content="#0b0b0f" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://nexacreativestudio.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://nexacreativestudio.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://nexacreativestudio.com/en/" />
 </head>
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <a class="skip" href="#content">Skip to content</a>
 
   <header>
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="NEXA — inicio">
+      <a class="brand" href="/en/" aria-label="NEXA — home">
         <div class="logo" aria-hidden="true"></div>
         <div class="wordmark">NE<span class="grad">XA</span></div>
       </a>
 
-      <nav aria-label="Principal">
+      <nav aria-label="Main">
         <ul>
-          <li><a class="active" href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a class="active" href="/en/">Home</a></li>
+          <li><a href="/en/services.html">Services</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
         </ul>
       </nav>
 
       <div class="cta">
-        <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
-        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+        <a class="btn primary" href="/en/contact.html">Start a project</a>
+        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
       </div>
     </div>
 
-    <!-- Menú móvil (overlay) -->
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+    <!-- Mobile menu (overlay) -->
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+      <a href="/en/">Home</a>
+      <a href="/en/services.html">Services</a>
+      <a href="/en/contact.html">Contact</a>
     </div>
   </header>
 
-  <main id="contenido">
+  <main id="content">
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <span class="kicker">Estudio creativo</span>
-        <h1 class="title">Diseño que impulsa negocios. <span class="grad">NEXA</span> crea marcas y sitios que convierten.</h1>
-        <p class="subtitle">Branding, web/UI y contenido con enfoque en rendimiento, estética y resultados. Trabajando para el mundo.</p>
+        <span class="kicker">Creative studio</span>
+        <h1 class="title">Design that drives business. <span class="grad">NEXA</span> builds brands and sites that convert.</h1>
+        <p class="subtitle">Branding, web/UI and content focused on performance, aesthetics and results. Working worldwide.</p>
       </div>
     </section>
 
-    <!-- Quiénes somos -->
-    <section id="quienes-somos">
+    <!-- Who we are -->
+    <section id="who-we-are">
       <div class="container about">
         <div class="panel">
-          <h2 class="section-title">Quiénes somos</h2>
-          <p>Somos un estudio creativo orientado a resultados. Combinamos estrategia, diseño y tecnología para construir marcas sólidas y experiencias digitales memorables. Trabajamos con emprendedores y negocios que valoran la excelencia y la velocidad de ejecución.</p>
+          <h2 class="section-title">Who we are</h2>
+          <p>We are a results-oriented creative studio. We blend strategy, design and technology to build strong brands and memorable digital experiences. We work with entrepreneurs and businesses that value excellence and speed of execution.</p>
           <div class="bullets">
-            <span class="chip">Proceso ágil & transparente</span>
-            <span class="chip">Entrega lista para producción</span>
-            <span class="chip">Rendimiento & accesibilidad</span>
-            <span class="chip">Soporte continuo</span>
+            <span class="chip">Agile & transparent process</span>
+            <span class="chip">Production-ready delivery</span>
+            <span class="chip">Performance & accessibility</span>
+            <span class="chip">Ongoing support</span>
           </div>
         </div>
         <div class="panel">
-          <h3>Enfoque y stack</h3>
-          <p>Diseño con propósito + implementación técnica impecable. HTML/CSS/JS o frameworks modernos; SEO técnico y analítica; deploy en GitHub Pages, Vercel o tu hosting preferido con SSL y DNS bien configurados.</p>
-          <a class="btn" href="servicios.html">Ver servicios</a>
+          <h3>Focus & stack</h3>
+          <p>Purposeful design + flawless technical implementation. HTML/CSS/JS or modern frameworks; technical SEO and analytics; deploy on GitHub Pages, Vercel or your preferred hosting with SSL and DNS properly configured.</p>
+          <a class="btn" href="/en/services.html">See services</a>
         </div>
       </div>
     </section>
 
-    <!-- Servicios principales (actualizado) -->
-    <section id="servicios-preview">
+    <!-- Services -->
+    <section id="services-preview">
       <div class="container">
-        <h2 class="section-title">Servicios principales</h2>
-        <p class="section-sub">Paquetes esenciales para lanzar o escalar tu marca.</p>
+        <h2 class="section-title">Core services</h2>
+        <p class="section-sub">Essential packages to launch or scale your brand.</p>
         <div class="grid-3">
           <article class="card">
             <h3>Branding</h3>
-            <p>Naming, identidad visual, brandbook y aplicaciones coherentes para destacar.</p>
+            <p>Naming, visual identity, brand book and consistent applications to stand out.</p>
           </article>
 
           <article class="card">
             <h3>Web / UI</h3>
-            <p>Sitios rápidos y accesibles, UI moderna, SEO técnico y medición desde el día uno.</p>
+            <p>Fast, accessible sites with modern UI, technical SEO and measurement from day one.</p>
           </article>
 
           <article class="card">
-            <h3>Software a medida</h3>
-            <p>Aplicaciones y herramientas personalizadas para tu operación: dashboards, APIs e integraciones, de MVP a producción.</p>
+            <h3>Custom software</h3>
+            <p>Custom tools for your operation: dashboards, APIs and integrations, from MVP to production.</p>
           </article>
 
           <article class="card">
             <h3>Landing+</h3>
-            <p>Página web con subdominio de NEXA que incluye página de inicio y un sistema de comercio: elige entre sistema de ventas, reservas o menú para comercios.</p>
+            <p>Website on a NEXA subdomain including a home page and a commerce system: choose between sales, bookings or a menu for businesses.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Galería (ahora con imágenes reales) -->
-    <section id="galeria">
+    <!-- Gallery -->
+    <section id="gallery">
       <div class="container">
-        <h2 class="section-title">Galería</h2>
-        <p class="section-sub">Muestras visuales de proyectos recientes.</p>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-sub">Visual samples of recent projects.</p>
         <div class="gallery">
           <figure class="tile">
-            <img src="img/proyect01.jpg" alt="Proyecto 01 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
-            <figcaption class="label">Proyecto 01</figcaption>
+            <img src="/img/proyect01.jpg" alt="Project 01 — NEXA work" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Project 01</figcaption>
           </figure>
           <figure class="tile">
-            <img src="img/proyecto 02.jpg" alt="Proyecto 02 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
-            <figcaption class="label">Proyecto 02</figcaption>
+            <img src="/img/proyecto 02.jpg" alt="Project 02 — NEXA work" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Project 02</figcaption>
           </figure>
           <figure class="tile">
-            <img src="img/proyecto 03.jpg" alt="Proyecto 03 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
-            <figcaption class="label">Proyecto 03</figcaption>
+            <img src="/img/proyecto 03.jpg" alt="Project 03 — NEXA work" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Project 03</figcaption>
           </figure>
           <figure class="tile">
-            <img src="img/proyecto 04.jpg" alt="Proyecto 04 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
-            <figcaption class="label">Proyecto 04</figcaption>
+            <img src="/img/proyecto 04.jpg" alt="Project 04 — NEXA work" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Project 04</figcaption>
           </figure>
         </div>
       </div>
@@ -132,9 +134,9 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> NEXA. Todos los derechos reservados.</div>
+      <div>© <span id="year"></span> NEXA. All rights reserved.</div>
       <div style="display:flex; gap:12px">
-        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         <span>·</span>
         <a href="#" aria-label="Behance">Behance</a>
         <span>·</span>
@@ -143,11 +145,7 @@
     </div>
   </footer>
 
-  <!-- Año dinámico -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  <!-- Utilidades comunes (menú móvil, scroll suave, fix 100vh iOS) -->
-  <script src="script.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/script.js" defer></script>
 </body>
 </html>
