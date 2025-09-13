@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>NEXA — Inicio</title>
+  <meta name="description" content="NEXA: estudio creativo de branding, web/UI y contenido. Página de inicio con quiénes somos, servicios y galería." />
+  <meta name="theme-color" content="#0b0b0f" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="NEXA — inicio">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="wordmark">NE<span class="grad">XA</span></div>
+      </a>
+
+      <nav aria-label="Principal">
+        <ul>
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta">
+        <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
+        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+      </div>
+    </div>
+
+    <!-- Menú móvil (overlay) -->
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="kicker">Estudio creativo</span>
+        <h1 class="title">Diseño que impulsa negocios. <span class="grad">NEXA</span> crea marcas y sitios que convierten.</h1>
+        <p class="subtitle">Branding, web/UI y contenido con enfoque en rendimiento, estética y resultados. Trabajando para el mundo.</p>
+      </div>
+    </section>
+
+    <!-- Quiénes somos -->
+    <section id="quienes-somos">
+      <div class="container about">
+        <div class="panel">
+          <h2 class="section-title">Quiénes somos</h2>
+          <p>Somos un estudio creativo orientado a resultados. Combinamos estrategia, diseño y tecnología para construir marcas sólidas y experiencias digitales memorables. Trabajamos con emprendedores y negocios que valoran la excelencia y la velocidad de ejecución.</p>
+          <div class="bullets">
+            <span class="chip">Proceso ágil & transparente</span>
+            <span class="chip">Entrega lista para producción</span>
+            <span class="chip">Rendimiento & accesibilidad</span>
+            <span class="chip">Soporte continuo</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Enfoque y stack</h3>
+          <p>Diseño con propósito + implementación técnica impecable. HTML/CSS/JS o frameworks modernos; SEO técnico y analítica; deploy en GitHub Pages, Vercel o tu hosting preferido con SSL y DNS bien configurados.</p>
+          <a class="btn" href="servicios.html">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios principales (actualizado) -->
+    <section id="servicios-preview">
+      <div class="container">
+        <h2 class="section-title">Servicios principales</h2>
+        <p class="section-sub">Paquetes esenciales para lanzar o escalar tu marca.</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Branding</h3>
+            <p>Naming, identidad visual, brandbook y aplicaciones coherentes para destacar.</p>
+          </article>
+
+          <article class="card">
+            <h3>Web / UI</h3>
+            <p>Sitios rápidos y accesibles, UI moderna, SEO técnico y medición desde el día uno.</p>
+          </article>
+
+          <article class="card">
+            <h3>Software a medida</h3>
+            <p>Aplicaciones y herramientas personalizadas para tu operación: dashboards, APIs e integraciones, de MVP a producción.</p>
+          </article>
+
+          <article class="card">
+            <h3>Landing+</h3>
+            <p>Página web con subdominio de NEXA que incluye página de inicio y un sistema de comercio: elige entre sistema de ventas, reservas o menú para comercios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería (ahora con imágenes reales) -->
+    <section id="galeria">
+      <div class="container">
+        <h2 class="section-title">Galería</h2>
+        <p class="section-sub">Muestras visuales de proyectos recientes.</p>
+        <div class="gallery">
+          <figure class="tile">
+            <img src="img/proyect01.jpg" alt="Proyecto 01 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Proyecto 01</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="img/proyecto 02.jpg" alt="Proyecto 02 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Proyecto 02</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="img/proyecto 03.jpg" alt="Proyecto 03 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Proyecto 03</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="img/proyecto 04.jpg" alt="Proyecto 04 — trabajo de NEXA" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" />
+            <figcaption class="label">Proyecto 04</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> NEXA. Todos los derechos reservados.</div>
+      <div style="display:flex; gap:12px">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <span>·</span>
+        <a href="#" aria-label="Behance">Behance</a>
+        <span>·</span>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Año dinámico -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <!-- Utilidades comunes (menú móvil, scroll suave, fix 100vh iOS) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
