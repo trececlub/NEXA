@@ -1,124 +1,128 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NEXA — Servicios</title>
-  <meta name="description" content="Qué hacemos en NEXA: diseño web, software a medida y branding. Servicios modulares orientados a resultados." />
-  <link rel="stylesheet" href="style.css" />
+  <title>NEXA — Services</title>
+  <meta name="description" content="What we do at NEXA: web design, custom software and branding. Modular services focused on results." />
+  <link rel="stylesheet" href="/style.css" />
   <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://nexacreativestudio.com/en/services.html" />
+  <link rel="alternate" hreflang="es" href="https://nexacreativestudio.com/servicios.html" />
+  <link rel="alternate" hreflang="x-default" href="https://nexacreativestudio.com/en/services.html" />
 </head>
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <a class="skip" href="#content">Skip to content</a>
   <header>
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="NEXA — inicio">
+      <a class="brand" href="/en/" aria-label="NEXA — home">
         <div class="logo" aria-hidden="true"></div>
         <div class="wordmark">NE<span class="grad">XA</span></div>
       </a>
-      <nav aria-label="Principal">
+      <nav aria-label="Main">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a class="active" href="servicios.html">Servicios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="/en/">Home</a></li>
+          <li><a class="active" href="/en/services.html">Services</a></li>
+          <li><a href="/en/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="cta">
-        <a class="btn primary" href="contacto.html">Iniciar proyecto</a>
-        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menú</button>
+        <a class="btn primary" href="/en/contact.html">Start a project</a>
+        <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
       </div>
     </div>
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navegación móvil">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+      <a href="/en/">Home</a>
+      <a href="/en/services.html">Services</a>
+      <a href="/en/contact.html">Contact</a>
     </div>
   </header>
 
-  <main id="contenido">
-    <!-- Intro / Qué hacemos -->
+  <main id="content">
+    <!-- Intro -->
     <section class="hero">
       <div class="container">
-        <span class="kicker">Servicios</span>
-        <h1 class="title">Qué hacemos en <span class="grad">NEXA</span></h1>
-        <p class="subtitle">Diseñamos y construimos experiencias que generan resultados medibles. Desde el concepto de marca hasta un sitio veloz y un sistema a medida para tu operación.</p>
+        <span class="kicker">Services</span>
+        <h1 class="title">What we do at <span class="grad">NEXA</span></h1>
+        <p class="subtitle">We design and build experiences that deliver measurable results—from brand concept to a fast site and custom systems for your operations.</p>
       </div>
     </section>
 
-    <!-- Servicios principales (ahora con Landing+) -->
-    <section id="servicios">
+    <!-- Main services (with Landing+) -->
+    <section id="services">
       <div class="container">
-        <h2 class="section-title">Servicios principales</h2>
-        <p class="section-sub">Elige un módulo o combínalos según tu objetivo.</p>
+        <h2 class="section-title">Core services</h2>
+        <p class="section-sub">Pick a module or combine them to match your goals.</p>
         <div class="grid-3">
-          <!-- Diseño Web -->
+          <!-- Web Design -->
           <article class="card" aria-labelledby="svc-web-title">
-            <h3 id="svc-web-title">Diseño web</h3>
-            <p>Sitios modernos, rápidos y accesibles, optimizados para convertir.</p>
+            <h3 id="svc-web-title">Web design</h3>
+            <p>Modern, fast and accessible sites optimized to convert.</p>
             <ul>
-              <li>UI/UX, responsive y performance (Core Web Vitals).</li>
-              <li>SEO técnico, mapas de sitio y metadatos.</li>
-              <li>Integraciones (analytics, formularios, chat, pagos).</li>
-              <li>Deploy con SSL y DNS correctos (GitHub Pages, Vercel u otros).</li>
+              <li>UI/UX, responsive layouts and performance (Core Web Vitals).</li>
+              <li>Technical SEO, sitemaps and metadata.</li>
+              <li>Integrations (analytics, forms, chat, payments).</li>
+              <li>Deploy with proper SSL & DNS (GitHub Pages, Vercel or others).</li>
             </ul>
-            <p><a class="btn" href="contacto.html?servicio=diseño-web">Solicitar propuesta</a></p>
+            <p><a class="btn" href="/en/contact.html?service=web-design">Request a proposal</a></p>
           </article>
 
-          <!-- Software a medida -->
+          <!-- Custom software -->
           <article class="card" aria-labelledby="svc-soft-title">
-            <h3 id="svc-soft-title">Software a medida</h3>
-            <p>Herramientas personalizadas para tu flujo: paneles, APIs e integraciones.</p>
+            <h3 id="svc-soft-title">Custom software</h3>
+            <p>Tailored tools for your workflow: dashboards, APIs and integrations.</p>
             <ul>
-              <li>Dashboards y back-office para gestión interna.</li>
-              <li>Automatizaciones e integración con terceros (APIs).</li>
-              <li>Prototipo → MVP → Producción con pruebas y documentación.</li>
-              <li>Soporte y evolución continua.</li>
+              <li>Dashboards and back-office for internal management.</li>
+              <li>Automations and third-party integrations (APIs).</li>
+              <li>Prototype → MVP → Production with testing and docs.</li>
+              <li>Ongoing support and evolution.</li>
             </ul>
-            <p><a class="btn" href="contacto.html?servicio=software-a-medida">Solicitar propuesta</a></p>
+            <p><a class="btn" href="/en/contact.html?service=custom-software">Request a proposal</a></p>
           </article>
 
           <!-- Branding -->
           <article class="card" aria-labelledby="svc-brand-title">
             <h3 id="svc-brand-title">Branding</h3>
-            <p>Identidades que comunican y conectan. Coherencia en cada punto de contacto.</p>
+            <p>Identities that communicate and connect. Consistency at every touchpoint.</p>
             <ul>
-              <li>Naming, identidad visual y sistema gráfico.</li>
-              <li>Brandbook, usos correctos y kit de aplicaciones.</li>
-              <li>Plantillas para redes y presentaciones.</li>
-              <li>Mockups y guías para implementación.</li>
+              <li>Naming, visual identity and design system.</li>
+              <li>Brand book, correct usage and applications kit.</li>
+              <li>Templates for social media and presentations.</li>
+              <li>Mockups and implementation guidelines.</li>
             </ul>
-            <p><a class="btn" href="contacto.html?servicio=branding">Solicitar propuesta</a></p>
+            <p><a class="btn" href="/en/contact.html?service=branding">Request a proposal</a></p>
           </article>
 
           <!-- Landing+ -->
           <article class="card" aria-labelledby="svc-landingplus-title">
             <h3 id="svc-landingplus-title">Landing+</h3>
-            <p>Página web rápida en <strong>subdominio de NEXA</strong> (ej. <em>tu-marca.nexa.studio</em>) que incluye una <strong>página de inicio</strong> y un <strong>sistema de comercio</strong> a elección.</p>
+            <p>Fast website on a <strong>NEXA subdomain</strong> (e.g., <em>your-brand.nexa.studio</em>) including a <strong>home page</strong> and a <strong>commerce system</strong> of your choice.</p>
             <ul>
-              <li><strong>Incluye:</strong> hosting gestionado, SSL, dominio tipo <code>nexa.studio</code> y optimización básica.</li>
-              <li><strong>Página de inicio</strong> con secciones clave (hero, servicios, CTA, contacto/WhatsApp).</li>
-              <li><strong>Sistema de comercio a elegir:</strong>
+              <li><strong>Includes:</strong> managed hosting, SSL, subdomain under <code>nexa.studio</code> and basic optimization.</li>
+              <li><strong>Home page</strong> with key sections (hero, services, CTA, contact/WhatsApp).</li>
+              <li><strong>Choose one commerce system:</strong>
                 <ul>
-                  <li><em>Sistema de ventas</em> (catálogo, checkout básico, notificaciones).</li>
-                  <li><em>Sistema de reservas</em> (agenda, confirmación por email/WhatsApp).</li>
-                  <li><em>Menú para comercios</em> (menú digital, pedidos por WhatsApp o checkout).</li>
+                  <li><em>Sales system</em> (catalog, basic checkout, notifications).</li>
+                  <li><em>Booking system</em> (schedule, confirmation by email/WhatsApp).</li>
+                  <li><em>Business menu</em> (digital menu, orders via WhatsApp or checkout).</li>
                 </ul>
               </li>
-              <li>Integraciones opcionales: pagos, analítica, chat.</li>
+              <li>Optional integrations: payments, analytics, chat.</li>
             </ul>
-            <p><a class="btn" href="contacto.html?servicio=landing-plus">Solicitar Landing+</a></p>
+            <p><a class="btn" href="/en/contact.html?service=landing-plus">Request Landing+</a></p>
           </article>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> NEXA. Todos los derechos reservados.</div>
+      <div>© <span id="year"></span> NEXA. All rights reserved.</div>
       <div style="display:flex; gap:12px">
-        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         <span>·</span>
         <a href="#" aria-label="Behance">Behance</a>
         <span>·</span>
@@ -128,6 +132,6 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="script.js" defer></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>
