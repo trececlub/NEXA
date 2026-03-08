@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Space_Grotesk } from "next/font/google";
+import DarkVeil from "@/components/dark-veil";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -44,7 +45,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${figtree.variable} ${spaceGrotesk.variable}`}>{children}</body>
+      <body className={`${figtree.variable} ${spaceGrotesk.variable}`}>
+        <div className="veil-layer" aria-hidden="true">
+          <DarkVeil
+            hueShift={14}
+            noiseIntensity={0.02}
+            scanlineIntensity={0.14}
+            speed={0.35}
+            scanlineFrequency={1.2}
+            warpAmount={0.9}
+            resolutionScale={1}
+          />
+        </div>
+        <div className="site-shell">{children}</div>
+      </body>
     </html>
   );
 }
