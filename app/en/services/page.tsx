@@ -51,6 +51,10 @@ export default function EnServicesPage() {
                   <span className="chip service-chip">Commercial presence</span>
                   <h3>Web design</h3>
                   <p>Business websites focused on conversion, trust and speed.</p>
+                  <p className="service-price">
+                    <span>Starting at</span>
+                    <strong>COP $2,900,000</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Business-driven UX/UI architecture.</li>
@@ -70,6 +74,10 @@ export default function EnServicesPage() {
                   <span className="chip service-chip">Digital operations</span>
                   <h3>Custom software</h3>
                   <p>Operational tools that remove bottlenecks and improve scale.</p>
+                  <p className="service-price">
+                    <span>Starting at</span>
+                    <strong>COP $4,500,000</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Admin dashboards and internal tools.</li>
@@ -89,6 +97,10 @@ export default function EnServicesPage() {
                   <span className="chip service-chip">Positioning</span>
                   <h3>Branding</h3>
                   <p>Identity systems that make your company look consistent and memorable.</p>
+                  <p className="service-price">
+                    <span>Starting at</span>
+                    <strong>COP $1,800,000</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Visual identity and brand system.</li>
@@ -108,6 +120,10 @@ export default function EnServicesPage() {
                   <span className="chip service-chip">Featured offer</span>
                   <h3>Landing+</h3>
                   <p>Fast commercial web setup with an integrated lead and conversion flow.</p>
+                  <p className="service-price is-monthly">
+                    <span>Monthly</span>
+                    <strong>COP $790,000/month</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Professional primary landing page.</li>

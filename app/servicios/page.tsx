@@ -52,6 +52,10 @@ export default function ServicesPage() {
                   <span className="chip service-chip">Presencia comercial</span>
                   <h3>Diseño web</h3>
                   <p>Web corporativa o comercial enfocada en conversión y credibilidad.</p>
+                  <p className="service-price">
+                    <span>Desde</span>
+                    <strong>$2.900.000 COP</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Arquitectura UX/UI orientada a objetivos de negocio.</li>
@@ -71,6 +75,10 @@ export default function ServicesPage() {
                   <span className="chip service-chip">Operación digital</span>
                   <h3>Software a medida</h3>
                   <p>Herramientas internas que reducen fricción operativa y escalan procesos.</p>
+                  <p className="service-price">
+                    <span>Desde</span>
+                    <strong>$4.500.000 COP</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Dashboards y paneles administrativos.</li>
@@ -90,6 +98,10 @@ export default function ServicesPage() {
                   <span className="chip service-chip">Posicionamiento</span>
                   <h3>Branding</h3>
                   <p>Construcción de marca para posicionarte con identidad y coherencia visual.</p>
+                  <p className="service-price">
+                    <span>Desde</span>
+                    <strong>$1.800.000 COP</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Identidad visual y sistema gráfico.</li>
@@ -109,6 +121,10 @@ export default function ServicesPage() {
                   <span className="chip service-chip">Oferta destacada</span>
                   <h3>Landing+</h3>
                   <p>Presencia web rápida con sistema comercial integrado para captar y convertir.</p>
+                  <p className="service-price is-monthly">
+                    <span>Mensual</span>
+                    <strong>$790.000 COP/mes</strong>
+                  </p>
                 </div>
                 <ul>
                   <li>Landing principal profesional.</li>
