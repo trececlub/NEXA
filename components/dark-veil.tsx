@@ -104,8 +104,7 @@ export default function DarkVeil({
 
     const renderer = new Renderer({
       dpr: Math.min(window.devicePixelRatio, 2),
-      canvas,
-      alpha: true
+      canvas
     });
 
     const gl = renderer.gl;
@@ -128,9 +127,8 @@ export default function DarkVeil({
     const mesh = new Mesh(gl, { geometry, program });
 
     const resize = () => {
-      const width = Math.max(parent.clientWidth, 1);
-      const height = Math.max(parent.clientHeight, 1);
-
+      const width = parent.clientWidth;
+      const height = parent.clientHeight;
       renderer.setSize(width * resolutionScale, height * resolutionScale);
       program.uniforms.uResolution.value.set(width, height);
     };
@@ -145,11 +143,11 @@ export default function DarkVeil({
       const elapsed = ((performance.now() - start) / 1000) * speed;
 
       program.uniforms.uTime.value = elapsed;
-      program.uniforms.uHueShift.value = hueShift + Math.sin(elapsed * 0.75) * 22;
+      program.uniforms.uHueShift.value = hueShift;
       program.uniforms.uNoise.value = noiseIntensity;
       program.uniforms.uScan.value = scanlineIntensity;
       program.uniforms.uScanFreq.value = scanlineFrequency;
-      program.uniforms.uWarp.value = warpAmount + Math.sin(elapsed * 0.45) * 0.28;
+      program.uniforms.uWarp.value = warpAmount;
 
       renderer.render({ scene: mesh });
       frame = requestAnimationFrame(loop);
@@ -160,7 +158,6 @@ export default function DarkVeil({
     return () => {
       cancelAnimationFrame(frame);
       window.removeEventListener("resize", resize);
-      gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
   }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
 

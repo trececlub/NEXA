@@ -48,14 +48,7 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.9;
-}
-
-.veil-layer::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(75% 58% at 50% 8%, rgba(6, 6, 10, 0.08), rgba(6, 6, 10, 0.34));
+  opacity: 1;
 }
 
 .dark-veil-canvas {
