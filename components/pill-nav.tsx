@@ -40,14 +40,14 @@ export function PillNav({
   homeAriaLabel,
   className = "",
   ease = "power3.out",
-  baseColor = "rgba(7, 7, 12, 0.86)",
-  pillColor = "rgba(245, 247, 255, 0.92)",
-  hoveredPillTextColor = "#0d0a18",
+  baseColor = "rgba(10, 12, 24, 0.78)",
+  pillColor = "rgba(16, 22, 40, 0.5)",
+  hoveredPillTextColor = "#eef5ff",
   pillTextColor,
   initialLoadAnimation = true,
   mobileExtra
 }: PillNavProps) {
-  const resolvedPillTextColor = pillTextColor ?? "#0d0a18";
+  const resolvedPillTextColor = pillTextColor ?? "#dce8ff";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
