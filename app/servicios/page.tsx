@@ -63,11 +63,11 @@ export default function ServicesPage() {
                   <li>SEO técnico, analytics y estructura de contenidos.</li>
                   <li>Publicación con SSL y dominio configurado.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=diseno-web">
                     Solicitar propuesta
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card">
@@ -86,11 +86,11 @@ export default function ServicesPage() {
                   <li>Automatización de tareas y flujos operativos.</li>
                   <li>Roadmap continuo con mejoras priorizadas.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=software-a-medida">
                     Solicitar propuesta
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card">
@@ -109,11 +109,11 @@ export default function ServicesPage() {
                   <li>Brandbook y piezas base para redes.</li>
                   <li>Guías de uso para implementación.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=branding">
                     Solicitar propuesta
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card is-featured">

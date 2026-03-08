@@ -746,8 +746,8 @@ section {
 }
 
 .service-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   gap: 14px;
   height: 100%;
   min-height: 500px;
@@ -838,6 +838,7 @@ section {
 .service-card ul {
   margin-top: 0;
   padding-left: 16px;
+  align-content: start;
 }
 
 .service-card ul li {
@@ -845,7 +846,12 @@ section {
 }
 
 .service-card-cta {
-  margin-top: auto;
+  margin-top: 0;
+}
+
+.service-card-cta .btn {
+  width: 100%;
+  justify-content: center;
 }
 
 .service-card-cta-dual {

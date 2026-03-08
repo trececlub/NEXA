@@ -62,11 +62,11 @@ export default function EnServicesPage() {
                   <li>Technical SEO, analytics and content structure.</li>
                   <li>Production deployment with SSL and domain setup.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=web-design">
                     Request proposal
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card">
@@ -85,11 +85,11 @@ export default function EnServicesPage() {
                   <li>Workflow and operations automation.</li>
                   <li>Prioritized ongoing improvement roadmap.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=custom-software">
                     Request proposal
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card">
@@ -108,11 +108,11 @@ export default function EnServicesPage() {
                   <li>Brandbook and social media starter assets.</li>
                   <li>Implementation guidelines for consistency.</li>
                 </ul>
-                <p className="service-card-cta">
+                <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=branding">
                     Request proposal
                   </Link>
-                </p>
+                </div>
               </article>
 
               <article className="card service-card is-featured">
