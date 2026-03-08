@@ -64,7 +64,7 @@ export default function ServicesPage() {
                   <li>Publicación con SSL y dominio configurado.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/contacto?servicio=diseno-web">
+                  <Link className="btn primary" href="/contacto?servicio=diseno-web">
                     Solicitar propuesta
                   </Link>
                 </p>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                   <li>Roadmap continuo con mejoras priorizadas.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/contacto?servicio=software-a-medida">
+                  <Link className="btn primary" href="/contacto?servicio=software-a-medida">
                     Solicitar propuesta
                   </Link>
                 </p>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
                   <li>Guías de uso para implementación.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/contacto?servicio=branding">
+                  <Link className="btn primary" href="/contacto?servicio=branding">
                     Solicitar propuesta
                   </Link>
                 </p>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                   </li>
                 </ul>
                 <div className="service-card-cta">
-                  <Link className="btn" href="/contacto?servicio=landing-plus">
+                  <Link className="btn primary" href="/contacto?servicio=landing-plus">
                     Solicitar Landing+
                   </Link>
                 </div>

@@ -63,7 +63,7 @@ export default function EnServicesPage() {
                   <li>Production deployment with SSL and domain setup.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/en/contact?service=web-design">
+                  <Link className="btn primary" href="/en/contact?service=web-design">
                     Request proposal
                   </Link>
                 </p>
@@ -86,7 +86,7 @@ export default function EnServicesPage() {
                   <li>Prioritized ongoing improvement roadmap.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/en/contact?service=custom-software">
+                  <Link className="btn primary" href="/en/contact?service=custom-software">
                     Request proposal
                   </Link>
                 </p>
@@ -109,7 +109,7 @@ export default function EnServicesPage() {
                   <li>Implementation guidelines for consistency.</li>
                 </ul>
                 <p className="service-card-cta">
-                  <Link className="btn" href="/en/contact?service=branding">
+                  <Link className="btn primary" href="/en/contact?service=branding">
                     Request proposal
                   </Link>
                 </p>
@@ -132,7 +132,7 @@ export default function EnServicesPage() {
                   <li><strong>NEXA Metrics included:</strong> starter dashboard and monthly performance review.</li>
                 </ul>
                 <div className="service-card-cta">
-                  <Link className="btn" href="/en/contact?service=landing-plus">
+                  <Link className="btn primary" href="/en/contact?service=landing-plus">
                     Request Landing+
                   </Link>
                 </div>
