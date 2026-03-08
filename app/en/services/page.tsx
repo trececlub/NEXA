@@ -34,9 +34,6 @@ export default function EnServicesPage() {
               <Link className="btn primary" href="/en/contact">
                 Get proposal
               </Link>
-              <Link className="btn" href="https://wa.me/573159836331" target="_blank" rel="noopener noreferrer">
-                Chat on WhatsApp
-              </Link>
             </div>
           </div>
         </section>

@@ -35,9 +35,6 @@ export default function ServicesPage() {
               <Link className="btn primary" href="/contacto">
                 Recibir propuesta
               </Link>
-              <Link className="btn" href="https://wa.me/573159836331" target="_blank" rel="noopener noreferrer">
-                Hablar por WhatsApp
-              </Link>
             </div>
           </div>
         </section>

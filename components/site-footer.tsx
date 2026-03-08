@@ -23,10 +23,6 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           </Link>
           <span>·</span>
           <Link href="mailto:hola@nexa.studio">hola@nexa.studio</Link>
-          <span>·</span>
-          <Link href="https://wa.me/573159836331" target="_blank" rel="noopener noreferrer">
-            WhatsApp
-          </Link>
         </div>
       </div>
     </footer>

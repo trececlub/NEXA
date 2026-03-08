@@ -75,7 +75,6 @@ type Copy = {
     title: string;
     text: string;
     primary: { label: string; href: string };
-    secondary: { label: string; href: string };
     floating: { label: string; href: string };
   };
 };
@@ -216,7 +215,6 @@ const copyByLocale: Record<Locale, Copy> = {
       title: "Si tu web no está vendiendo, está frenando tu crecimiento",
       text: "Te proponemos una estructura visual y comercial lista para convertir desde la primera versión.",
       primary: { label: "Agendar llamada estratégica", href: "/contacto" },
-      secondary: { label: "Escribir por WhatsApp", href: "https://wa.me/573159836331" },
       floating: { label: "Agenda llamada", href: "/contacto" }
     }
   },
@@ -355,7 +353,6 @@ const copyByLocale: Record<Locale, Copy> = {
       title: "If your website is not selling, it is slowing your growth",
       text: "We build a visual and commercial structure designed to convert from version one.",
       primary: { label: "Book strategic call", href: "/en/contact" },
-      secondary: { label: "Chat on WhatsApp", href: "https://wa.me/573159836331" },
       floating: { label: "Book a call", href: "/en/contact" }
     }
   }
