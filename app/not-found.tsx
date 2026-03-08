@@ -5,9 +5,6 @@ import { SiteHeader } from "@/components/site-header";
 export default function NotFound() {
   return (
     <>
-      <a className="skip" href="#contenido">
-        Saltar al contenido
-      </a>
       <SiteHeader locale="es" activePage="home" />
       <main id="contenido">
         <section className="hero">

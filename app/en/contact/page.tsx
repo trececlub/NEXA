@@ -19,9 +19,6 @@ export const metadata: Metadata = {
 export default function EnContactPage() {
   return (
     <>
-      <a className="skip" href="#content">
-        Skip to content
-      </a>
       <SiteHeader locale="en" activePage="contact" ctaLabel="Send brief" />
 
       <main id="content">

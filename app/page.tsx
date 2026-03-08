@@ -27,9 +27,6 @@ const gallery = [
 export default function HomePage() {
   return (
     <>
-      <a className="skip" href="#contenido">
-        Saltar al contenido
-      </a>
       <SiteHeader locale="es" activePage="home" />
 
       <main id="contenido">

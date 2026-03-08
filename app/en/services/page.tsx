@@ -18,9 +18,6 @@ export const metadata: Metadata = {
 export default function EnServicesPage() {
   return (
     <>
-      <a className="skip" href="#content">
-        Skip to content
-      </a>
       <SiteHeader locale="en" activePage="services" />
 
       <main id="content">
