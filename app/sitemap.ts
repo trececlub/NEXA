@@ -8,10 +8,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicios",
     "/nexa-metrics",
     "/contacto",
+    "/privacy-policy",
+    "/terms-and-conditions",
+    "/imprint",
     "/en",
     "/en/services",
     "/en/nexa-metrics",
-    "/en/contact"
+    "/en/contact",
+    "/en/privacy-policy",
+    "/en/terms-and-conditions",
+    "/en/imprint"
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),

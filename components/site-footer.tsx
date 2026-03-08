@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 
 type SiteFooterProps = {
   locale: "es" | "en";
@@ -6,6 +7,17 @@ type SiteFooterProps = {
 
 export function SiteFooter({ locale }: SiteFooterProps) {
   const isEs = locale === "es";
+  const legalLinks = isEs
+    ? [
+        { href: "/privacy-policy", label: "Privacy Policy" },
+        { href: "/terms-and-conditions", label: "Terms and Conditions" },
+        { href: "/imprint", label: "Imprint" }
+      ]
+    : [
+        { href: "/en/privacy-policy", label: "Privacy Policy" },
+        { href: "/en/terms-and-conditions", label: "Terms and Conditions" },
+        { href: "/en/imprint", label: "Imprint" }
+      ];
 
   return (
     <footer>
@@ -23,6 +35,12 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           </Link>
           <span>·</span>
           <Link href="mailto:hola@nexa.studio">hola@nexa.studio</Link>
+          {legalLinks.map((item) => (
+            <Fragment key={item.href}>
+              <span>·</span>
+              <Link href={item.href}>{item.label}</Link>
+            </Fragment>
+          ))}
         </div>
       </div>
     </footer>
