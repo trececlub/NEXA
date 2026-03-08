@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import { Figtree, Space_Grotesk } from "next/font/google";
 import DarkVeil from "@/components/dark-veil";
+import { NoWidows } from "@/components/no-widows";
 import "./globals.css";
-
-const figtree = Figtree({
-  subsets: ["latin"],
-  variable: "--font-figtree",
-  display: "swap"
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space",
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexacreativestudio.com"),
@@ -45,7 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${figtree.variable} ${spaceGrotesk.variable}`}>
+      <body>
+        <NoWidows />
         <div className="veil-layer" aria-hidden="true">
           <DarkVeil />
         </div>

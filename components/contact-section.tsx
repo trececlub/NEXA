@@ -20,13 +20,15 @@ const serviceOptionsByLocale: Record<Locale, ServiceOption[]> = {
     { value: "diseno-web", label: "Diseño web" },
     { value: "software-a-medida", label: "Software a medida" },
     { value: "branding", label: "Branding" },
-    { value: "landing-plus", label: "Landing+" }
+    { value: "landing-plus", label: "Landing+" },
+    { value: "nexa-metrics", label: "NEXA Metrics mensual" }
   ],
   en: [
     { value: "web-design", label: "Web design" },
     { value: "custom-software", label: "Custom software" },
     { value: "branding", label: "Branding" },
-    { value: "landing-plus", label: "Landing+" }
+    { value: "landing-plus", label: "Landing+" },
+    { value: "nexa-metrics", label: "NEXA Metrics monthly" }
   ]
 };
 

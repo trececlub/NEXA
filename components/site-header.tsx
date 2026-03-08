@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { PillNav } from "@/components/pill-nav";
 
 type Locale = "es" | "en";
-type ActivePage = "home" | "services" | "contact";
+type ActivePage = "home" | "services" | "metrics" | "contact";
 
 type SiteHeaderProps = {
   locale: Locale;
@@ -17,11 +17,13 @@ const routes = {
   es: {
     home: "/",
     services: "/servicios",
+    metrics: "/nexa-metrics",
     contact: "/contacto"
   },
   en: {
     home: "/en",
     services: "/en/services",
+    metrics: "/en/nexa-metrics",
     contact: "/en/contact"
   }
 } as const;
@@ -30,10 +32,8 @@ const labels = {
   es: {
     home: "Inicio",
     services: "Servicios",
+    metrics: "Metrics",
     contact: "Contacto",
-    menu: "Menú",
-    nav: "Principal",
-    mobileNav: "Navegación móvil",
     cta: "Empezar proyecto",
     lang: "Seleccionar idioma",
     homeAria: "NEXA inicio"
@@ -41,10 +41,8 @@ const labels = {
   en: {
     home: "Home",
     services: "Services",
+    metrics: "Metrics",
     contact: "Contact",
-    menu: "Menu",
-    nav: "Main",
-    mobileNav: "Mobile navigation",
     cta: "Start project",
     lang: "Language selector",
     homeAria: "NEXA home"
@@ -52,25 +50,16 @@ const labels = {
 } as const;
 
 export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const router = useRouter();
   const t = labels[locale];
   const currentRoutes = routes[locale];
 
-  useEffect(() => {
-    document.body.style.overflow = isMobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMobileOpen]);
-
-  const closeMenu = () => setIsMobileOpen(false);
   const targetLocale: Locale = locale === "es" ? "en" : "es";
   const targetHref = routes[targetLocale][activePage];
+  const activeHref = currentRoutes[activePage];
 
-  const renderLanguageSwitch = (id: string, onToggle?: () => void) => (
+  const renderLanguageSwitch = (id: string) => (
     <label className="switch-button" htmlFor={id} title={t.lang}>
-      <span className="switch-label switch-label-es">ES</span>
       <div className="switch-outer">
         <input
           id={id}
@@ -79,80 +68,44 @@ export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
           aria-label={t.lang}
           onChange={() => {
             router.push(targetHref);
-            onToggle?.();
           }}
         />
         <div className="button">
+          <span className="switch-text switch-text-es">ES</span>
+          <span className="switch-text switch-text-en">EN</span>
           <span className="button-toggle" />
-          <span className="button-indicator" />
         </div>
       </div>
-      <span className="switch-label switch-label-en">EN</span>
     </label>
   );
 
   return (
-    <header>
-      <div className="container nav">
-        <Link className="brand" href={currentRoutes.home} aria-label={t.homeAria}>
-          <div className="logo" aria-hidden="true" />
-          <div className="wordmark">
-            NE<span className="grad">XA</span>
-          </div>
-        </Link>
+    <header className="pill-header">
+      <div className="container pill-header-row">
+        <PillNav
+          items={[
+            { label: t.home, href: currentRoutes.home },
+            { label: t.services, href: currentRoutes.services },
+            { label: t.metrics, href: currentRoutes.metrics },
+            { label: t.contact, href: currentRoutes.contact }
+          ]}
+          homeHref={currentRoutes.home}
+          homeAriaLabel={t.homeAria}
+          activeHref={activeHref}
+          mobileExtra={
+            <div className="lang-switch pill-lang-mobile" aria-label={t.lang}>
+              {renderLanguageSwitch(`lang-switch-mobile-${activePage}`)}
+            </div>
+          }
+        />
 
-        <nav aria-label={t.nav}>
-          <ul>
-            <li>
-              <Link className={activePage === "home" ? "active" : ""} href={currentRoutes.home}>
-                {t.home}
-              </Link>
-            </li>
-            <li>
-              <Link className={activePage === "services" ? "active" : ""} href={currentRoutes.services}>
-                {t.services}
-              </Link>
-            </li>
-            <li>
-              <Link className={activePage === "contact" ? "active" : ""} href={currentRoutes.contact}>
-                {t.contact}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        <div className="cta">
-          <Link className="btn primary" href={currentRoutes.contact}>
+        <div className="pill-header-actions">
+          <Link className="btn primary pill-header-cta" href={currentRoutes.contact}>
             {ctaLabel ?? t.cta}
           </Link>
-          <button
-            type="button"
-            className="btn menu-btn"
-            id="menuBtn"
-            aria-expanded={isMobileOpen}
-            aria-controls="mobileNav"
-            onClick={() => setIsMobileOpen((prev) => !prev)}
-          >
-            {t.menu}
-          </button>
-          <div className="lang-switch" aria-label={t.lang}>
+          <div className="lang-switch pill-lang-desktop" aria-label={t.lang}>
             {renderLanguageSwitch(`lang-switch-desktop-${activePage}`)}
           </div>
-        </div>
-      </div>
-
-      <div className={`mobile-nav ${isMobileOpen ? "is-open" : ""}`} id="mobileNav" role="dialog" aria-label={t.mobileNav}>
-        <Link href={currentRoutes.home} onClick={closeMenu}>
-          {t.home}
-        </Link>
-        <Link href={currentRoutes.services} onClick={closeMenu}>
-          {t.services}
-        </Link>
-        <Link href={currentRoutes.contact} onClick={closeMenu}>
-          {t.contact}
-        </Link>
-        <div className="lang-switch lang-mobile" aria-label={t.lang}>
-          {renderLanguageSwitch(`lang-switch-mobile-${activePage}`, closeMenu)}
         </div>
       </div>
     </header>

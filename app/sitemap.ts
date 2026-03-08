@@ -6,9 +6,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "",
     "/servicios",
+    "/nexa-metrics",
     "/contacto",
     "/en",
     "/en/services",
+    "/en/nexa-metrics",
     "/en/contact"
   ].map((path) => ({
     url: `${baseUrl}${path}`,
