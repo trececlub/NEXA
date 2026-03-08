@@ -68,7 +68,6 @@ export default function NEXAMetricsPage() {
                 <strong>$349.000 COP</strong>
                 <span>/mes</span>
               </p>
-              <p className="metrics-old-price">Precio regular anterior: $790.000 COP/mes</p>
               <p>
                 Incluye implementación inicial, panel activo y lectura ejecutiva mensual para mejorar decisiones
                 comerciales.
@@ -98,6 +97,35 @@ export default function NEXAMetricsPage() {
               </Link>
               <Link className="btn" href="/servicios">
                 Ver Landing+
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section id="condiciones-metrics">
+          <div className="container">
+            <h2 className="section-title">Condiciones del plan NEXA Metrics</h2>
+            <ul className="metrics-simple-list">
+              <li>
+                Precio regular del plan: <strong>$349.000 COP/mes</strong>.
+              </li>
+              <li>
+                Oferta de entrada: <strong>$299.000 COP/mes</strong> por los primeros 3 meses para clientes nuevos.
+              </li>
+              <li>Facturación mensual anticipada por proyecto activo.</li>
+              <li>Incluye 1 revisión mensual ejecutiva y plan de acciones priorizadas.</li>
+              <li>
+                No incluye rediseño completo, campañas pagas, desarrollos a medida ni integraciones fuera del alcance
+                base.
+              </li>
+              <li>Se puede cancelar antes del siguiente ciclo mensual. El periodo ya facturado no es reembolsable.</li>
+            </ul>
+            <div className="hero-actions">
+              <Link className="btn" href="/terms-and-conditions">
+                Ver términos completos
+              </Link>
+              <Link className="btn" href="/privacy-policy">
+                Ver política de privacidad
               </Link>
             </div>
           </div>

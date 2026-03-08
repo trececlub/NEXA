@@ -947,14 +947,6 @@ section {
   font-size: 0.95rem;
 }
 
-.metrics-old-price {
-  margin: 8px 0 0;
-  color: rgba(199, 210, 234, 0.72);
-  font-size: 0.9rem;
-  text-decoration: line-through;
-  text-decoration-thickness: 1px;
-}
-
 @media (max-width: 860px) {
   .service-card {
     min-height: 460px;

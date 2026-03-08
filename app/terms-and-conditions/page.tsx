@@ -81,7 +81,27 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "5. Responsabilidad y disponibilidad",
+          title: "5. Condiciones específicas de NEXA Metrics",
+          body: (
+            <>
+              <p>
+                NEXA Metrics es un servicio mensual por proyecto, con facturación anticipada y alcance definido en la
+                propuesta comercial vigente.
+              </p>
+              <p>
+                La oferta de entrada de <strong>$299.000 COP/mes</strong> aplica durante los primeros 3 meses para
+                nuevos clientes. Después de ese periodo, el plan pasa a <strong>$349.000 COP/mes</strong>, salvo
+                acuerdo distinto por escrito.
+              </p>
+              <p>
+                El plan incluye implementación base, dashboard y una revisión mensual. Servicios fuera de alcance (por
+                ejemplo: rediseños completos, desarrollos especiales o gestión de pauta) se cotizan por separado.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "6. Responsabilidad y disponibilidad",
           body: (
             <>
               <p>
@@ -96,7 +116,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "6. Enlaces externos",
+          title: "7. Enlaces externos",
           body: (
             <p>
               Este sitio puede contener enlaces a plataformas de terceros. NEXA no controla ni asume responsabilidad
@@ -105,7 +125,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "7. Ley aplicable",
+          title: "8. Ley aplicable",
           body: (
             <>
               <p>
@@ -119,7 +139,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "8. Contacto legal",
+          title: "9. Contacto legal",
           body: (
             <p>
               Para consultas sobre estos términos escribe a <strong>hola@nexa.studio</strong>.

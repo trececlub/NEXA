@@ -65,7 +65,6 @@ export default function EnNEXAMetricsPage() {
                 <strong>COP $349,000</strong>
                 <span>/month</span>
               </p>
-              <p className="metrics-old-price">Previous regular price: COP $790,000/month</p>
               <p>
                 Includes initial implementation, live dashboard and a monthly executive readout to improve commercial
                 decision-making.
@@ -95,6 +94,34 @@ export default function EnNEXAMetricsPage() {
               </Link>
               <Link className="btn" href="/en/services">
                 View Landing+
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section id="metrics-plan-terms">
+          <div className="container">
+            <h2 className="section-title">NEXA Metrics plan conditions</h2>
+            <ul className="metrics-simple-list">
+              <li>
+                Standard plan price: <strong>COP $349,000/month</strong>.
+              </li>
+              <li>
+                Intro offer: <strong>COP $299,000/month</strong> for the first 3 months for new clients.
+              </li>
+              <li>Monthly billing in advance per active project.</li>
+              <li>Includes one monthly executive review and prioritized action plan.</li>
+              <li>
+                Full redesign, paid media management, custom development and out-of-scope integrations are not included.
+              </li>
+              <li>Cancellation applies to the next cycle. The billed period already consumed is non-refundable.</li>
+            </ul>
+            <div className="hero-actions">
+              <Link className="btn" href="/en/terms-and-conditions">
+                View full terms
+              </Link>
+              <Link className="btn" href="/en/privacy-policy">
+                View privacy policy
               </Link>
             </div>
           </div>

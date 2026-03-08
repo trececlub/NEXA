@@ -122,7 +122,22 @@ export default function PrivacyPolicyPage() {
           )
         },
         {
-          title: "8. Cambios de esta política",
+          title: "8. Tratamiento de datos en NEXA Metrics",
+          body: (
+            <>
+              <p>
+                Si activas NEXA Metrics, podemos procesar datos de rendimiento comercial del sitio (eventos, fuentes,
+                conversiones y comportamiento de navegación) para entregar análisis y recomendaciones.
+              </p>
+              <p>
+                El cliente es responsable de contar con base legal y avisos de consentimiento cuando su sitio use
+                cookies o tecnologías de seguimiento frente a usuarios finales.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "9. Cambios de esta política",
           body: (
             <p>
               Podemos actualizar esta política para reflejar cambios legales, técnicos o de servicio. La versión

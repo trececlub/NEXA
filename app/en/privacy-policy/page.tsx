@@ -118,7 +118,22 @@ export default function EnPrivacyPolicyPage() {
           )
         },
         {
-          title: "8. Policy updates",
+          title: "8. Data processing in NEXA Metrics",
+          body: (
+            <>
+              <p>
+                If you activate NEXA Metrics, we may process commercial performance data (events, traffic sources,
+                conversions and behavioral usage signals) to provide analysis and optimization recommendations.
+              </p>
+              <p>
+                The client is responsible for implementing proper legal notices and consent mechanisms on their own
+                website when cookies or tracking technologies are used for end users.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "9. Policy updates",
           body: (
             <p>
               We may update this policy due to legal, technical or service changes. The current version is always the

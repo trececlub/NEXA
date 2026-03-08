@@ -78,7 +78,27 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "5. Liability and availability",
+          title: "5. NEXA Metrics specific conditions",
+          body: (
+            <>
+              <p>
+                NEXA Metrics is a monthly service billed per active project in advance, under the scope defined in the
+                accepted commercial proposal.
+              </p>
+              <p>
+                The intro offer of <strong>COP $299,000/month</strong> applies for the first 3 months to new clients.
+                After that period, the plan moves to <strong>COP $349,000/month</strong>, unless otherwise agreed in
+                writing.
+              </p>
+              <p>
+                The plan includes base implementation, dashboard and one monthly review. Out-of-scope services (full
+                redesigns, custom development, paid media management) are quoted separately.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "6. Liability and availability",
           body: (
             <>
               <p>
@@ -93,7 +113,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "6. External links",
+          title: "7. External links",
           body: (
             <p>
               This website may include links to third-party services. NEXA does not control or assume responsibility
@@ -102,7 +122,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "7. Governing law",
+          title: "8. Governing law",
           body: (
             <>
               <p>
@@ -114,7 +134,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "8. Legal contact",
+          title: "9. Legal contact",
           body: (
             <p>
               For legal inquiries regarding these terms, contact <strong>hola@nexa.studio</strong>.
