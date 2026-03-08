@@ -758,6 +758,30 @@ section {
   gap: 10px;
 }
 
+.service-popular-badge {
+  width: fit-content;
+  min-height: 28px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(113, 215, 255, 0.5);
+  background: linear-gradient(
+    120deg,
+    rgba(113, 215, 255, 0.28) 0%,
+    rgba(219, 123, 255, 0.24) 55%,
+    rgba(12, 18, 32, 0.62) 100%
+  );
+  box-shadow:
+    0 8px 16px rgba(5, 10, 22, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #f4f8ff;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .service-price {
   margin: 2px 0 0;
   width: fit-content;
@@ -828,15 +852,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
-
-.service-card.is-featured {
-  border-color: rgba(125, 210, 255, 0.42);
-  box-shadow:
-    0 20px 52px rgba(3, 5, 14, 0.46),
-    inset 0 1px 0 rgba(255, 255, 255, 0.26),
-    inset 0 -1px 0 rgba(113, 215, 255, 0.22),
-    inset 0 0 28px 3px rgba(113, 215, 255, 0.2);
 }
 
 @media (max-width: 860px) {

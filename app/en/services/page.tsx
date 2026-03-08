@@ -118,6 +118,7 @@ export default function EnServicesPage() {
               <article className="card service-card is-featured">
                 <div className="service-card-head">
                   <span className="chip service-chip">Featured offer</span>
+                  <span className="service-popular-badge">Most purchased</span>
                   <h3>Landing+</h3>
                   <p>Fast commercial web setup with an integrated lead and conversion flow.</p>
                   <p className="service-price is-monthly">

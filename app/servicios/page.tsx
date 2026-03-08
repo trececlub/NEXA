@@ -119,6 +119,7 @@ export default function ServicesPage() {
               <article className="card service-card is-featured">
                 <div className="service-card-head">
                   <span className="chip service-chip">Oferta destacada</span>
+                  <span className="service-popular-badge">Más comprado</span>
                   <h3>Landing+</h3>
                   <p>Presencia web rápida con sistema comercial integrado para captar y convertir.</p>
                   <p className="service-price is-monthly">
