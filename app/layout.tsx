@@ -48,12 +48,12 @@ export default function RootLayout({
       <body className={`${figtree.variable} ${spaceGrotesk.variable}`}>
         <div className="veil-layer" aria-hidden="true">
           <DarkVeil
-            hueShift={14}
-            noiseIntensity={0.02}
-            scanlineIntensity={0.14}
-            speed={0.35}
-            scanlineFrequency={1.2}
-            warpAmount={0.9}
+            hueShift={18}
+            noiseIntensity={0.035}
+            scanlineIntensity={0.16}
+            speed={1.05}
+            scanlineFrequency={1.45}
+            warpAmount={1.2}
             resolutionScale={1}
           />
         </div>

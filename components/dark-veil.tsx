@@ -145,11 +145,11 @@ export default function DarkVeil({
       const elapsed = ((performance.now() - start) / 1000) * speed;
 
       program.uniforms.uTime.value = elapsed;
-      program.uniforms.uHueShift.value = hueShift;
+      program.uniforms.uHueShift.value = hueShift + Math.sin(elapsed * 0.75) * 22;
       program.uniforms.uNoise.value = noiseIntensity;
       program.uniforms.uScan.value = scanlineIntensity;
       program.uniforms.uScanFreq.value = scanlineFrequency;
-      program.uniforms.uWarp.value = warpAmount;
+      program.uniforms.uWarp.value = warpAmount + Math.sin(elapsed * 0.45) * 0.28;
 
       renderer.render({ scene: mesh });
       frame = requestAnimationFrame(loop);
