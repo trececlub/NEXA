@@ -740,6 +740,71 @@ section {
   margin-top: 8px;
 }
 
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+}
+
+.service-card-head {
+  display: grid;
+  gap: 10px;
+}
+
+.service-chip {
+  width: fit-content;
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.service-card ul {
+  margin-top: 0;
+  padding-left: 16px;
+}
+
+.service-card ul li {
+  color: rgba(229, 236, 255, 0.9);
+}
+
+.service-note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(208, 221, 248, 0.88);
+}
+
+.service-card-cta {
+  margin-top: auto;
+}
+
+.service-card-cta-dual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-card.is-featured {
+  border-color: rgba(125, 210, 255, 0.42);
+  box-shadow:
+    0 20px 52px rgba(3, 5, 14, 0.46),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(113, 215, 255, 0.22),
+    inset 0 0 28px 3px rgba(113, 215, 255, 0.2);
+}
+
+@media (min-width: 961px) {
+  .service-card.is-featured {
+    grid-column: span 2;
+  }
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

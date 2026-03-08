@@ -44,98 +44,92 @@ export default function EnServicesPage() {
         <section id="services">
           <div className="container">
             <h2 className="section-title">Main offers</h2>
-            <p className="section-sub">Clear deliverables, realistic timelines, business-first execution.</p>
-            <div className="grid-3">
-              <article className="card">
-                <h3>Web design</h3>
-                <p>Business websites focused on conversion, trust and speed.</p>
+            <p className="section-sub">Choose one clear path or combine services into a complete commercial system.</p>
+            <div className="grid-3 services-grid">
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Commercial presence</span>
+                  <h3>Web design</h3>
+                  <p>Business websites focused on conversion, trust and speed.</p>
+                </div>
                 <ul>
-                  <li>Conversion-oriented UX/UI design.</li>
-                  <li>Responsive development and performance optimization.</li>
-                  <li>Technical SEO setup and analytics.</li>
-                  <li>SSL, domain and production deployment.</li>
+                  <li>Business-driven UX/UI architecture.</li>
+                  <li>Responsive implementation and performance optimization.</li>
+                  <li>Technical SEO setup, analytics and content structure.</li>
+                  <li>Production deployment with SSL and domain setup.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/en/contact?service=web-design">
                     Request proposal
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Custom software</h3>
-                <p>Operational tools that remove bottlenecks and improve scale.</p>
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Digital operations</span>
+                  <h3>Custom software</h3>
+                  <p>Operational tools that remove bottlenecks and improve scale.</p>
+                </div>
                 <ul>
                   <li>Admin dashboards and internal tools.</li>
-                  <li>Third-party API integrations.</li>
-                  <li>Workflow automation.</li>
-                  <li>Ongoing product improvements.</li>
+                  <li>External APIs and system integrations.</li>
+                  <li>Critical workflow automation.</li>
+                  <li>Prioritized ongoing improvement roadmap.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/en/contact?service=custom-software">
                     Request proposal
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Branding</h3>
-                <p>Identity systems that make your company look consistent and memorable.</p>
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Positioning</span>
+                  <h3>Branding</h3>
+                  <p>Identity systems that make your company look consistent and memorable.</p>
+                </div>
                 <ul>
                   <li>Visual identity and brand system.</li>
                   <li>Color, typography and tone framework.</li>
-                  <li>Brandbook and social templates.</li>
-                  <li>Implementation guidelines.</li>
+                  <li>Brandbook and social media starter assets.</li>
+                  <li>Implementation guidelines for consistency.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/en/contact?service=branding">
                     Request proposal
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Landing+</h3>
-                <p>Fast launch on a NEXA subdomain with an integrated commerce flow.</p>
+              <article className="card service-card is-featured">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Featured offer</span>
+                  <h3>Landing+</h3>
+                  <p>Fast commercial web setup with an integrated lead and conversion flow.</p>
+                </div>
                 <ul>
-                  <li>Professional landing page.</li>
-                  <li>One system: sales, bookings or digital menu.</li>
+                  <li>Professional primary landing page.</li>
+                  <li>One system included: sales, bookings or digital menu.</li>
                   <li>Managed hosting and SSL included.</li>
-                  <li>WhatsApp and analytics setup.</li>
+                  <li>WhatsApp integration and commercial analytics.</li>
+                  <li>
+                    <strong>NEXA Metrics included:</strong> starter dashboard and monthly performance tracking.
+                  </li>
                 </ul>
-                <p>
+                <p className="service-note">
+                  You can also activate NEXA Metrics as a monthly service for websites not built by NEXA.
+                </p>
+                <div className="service-card-cta service-card-cta-dual">
                   <Link className="btn" href="/en/contact?service=landing-plus">
                     Request Landing+
                   </Link>
-                </p>
+                  <Link className="btn" href="/en/nexa-metrics">
+                    View NEXA Metrics
+                  </Link>
+                </div>
               </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="process">
-          <div className="container about">
-            <div className="panel">
-              <h2 className="section-title">How we work</h2>
-              <p>You get a clear process from discovery to launch, without endless loops.</p>
-              <div className="bullets">
-                <span className="chip">1. Discovery</span>
-                <span className="chip">2. Design</span>
-                <span className="chip">3. Build</span>
-                <span className="chip">4. Launch</span>
-              </div>
-            </div>
-            <div className="panel">
-              <h3>Need a hybrid setup?</h3>
-              <p>
-                We can combine branding, web and software into one integrated proposal based on your business
-                priorities.
-              </p>
-              <p>
-                <Link className="btn" href="/en/contact">
-                  Request custom scope
-                </Link>
-              </p>
             </div>
           </div>
         </section>

@@ -45,97 +45,92 @@ export default function ServicesPage() {
         <section id="servicios">
           <div className="container">
             <h2 className="section-title">Paquetes principales</h2>
-            <p className="section-sub">Cada servicio se adapta a tu etapa: desde lanzamiento hasta escalamiento.</p>
-            <div className="grid-3">
-              <article className="card">
-                <h3>Diseño web</h3>
-                <p>Web corporativa o comercial enfocada en conversión y credibilidad.</p>
+            <p className="section-sub">Elige una ruta clara o combina servicios para construir un sistema comercial completo.</p>
+            <div className="grid-3 services-grid">
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Presencia comercial</span>
+                  <h3>Diseño web</h3>
+                  <p>Web corporativa o comercial enfocada en conversión y credibilidad.</p>
+                </div>
                 <ul>
-                  <li>Diseño UI/UX con enfoque comercial.</li>
+                  <li>Arquitectura UX/UI orientada a objetivos de negocio.</li>
                   <li>Implementación responsive y optimización de velocidad.</li>
                   <li>SEO técnico, analytics y estructura de contenidos.</li>
                   <li>Publicación con SSL y dominio configurado.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/contacto?servicio=diseno-web">
                     Solicitar propuesta
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Software a medida</h3>
-                <p>Herramientas internas que reducen fricción operativa y escalan procesos.</p>
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Operación digital</span>
+                  <h3>Software a medida</h3>
+                  <p>Herramientas internas que reducen fricción operativa y escalan procesos.</p>
+                </div>
                 <ul>
                   <li>Dashboards y paneles administrativos.</li>
-                  <li>Integraciones con APIs externas.</li>
-                  <li>Automatización de tareas y flujos.</li>
-                  <li>Roadmap continuo de mejoras.</li>
+                  <li>Integraciones con APIs y sistemas externos.</li>
+                  <li>Automatización de tareas y flujos críticos.</li>
+                  <li>Roadmap continuo con mejoras priorizadas.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/contacto?servicio=software-a-medida">
                     Solicitar propuesta
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Branding</h3>
-                <p>Construcción de marca para posicionarte con identidad y coherencia visual.</p>
+              <article className="card service-card">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Posicionamiento</span>
+                  <h3>Branding</h3>
+                  <p>Construcción de marca para posicionarte con identidad y coherencia visual.</p>
+                </div>
                 <ul>
                   <li>Identidad visual y sistema gráfico.</li>
                   <li>Paleta, tipografía y tono de marca.</li>
                   <li>Brandbook y piezas base para redes.</li>
                   <li>Guías de uso para implementación.</li>
                 </ul>
-                <p>
+                <p className="service-card-cta">
                   <Link className="btn" href="/contacto?servicio=branding">
                     Solicitar propuesta
                   </Link>
                 </p>
               </article>
 
-              <article className="card">
-                <h3>Landing+</h3>
-                <p>Presencia web rápida en subdominio NEXA con sistema comercial integrado.</p>
+              <article className="card service-card is-featured">
+                <div className="service-card-head">
+                  <span className="chip service-chip">Oferta destacada</span>
+                  <h3>Landing+</h3>
+                  <p>Presencia web rápida con sistema comercial integrado para captar y convertir.</p>
+                </div>
                 <ul>
                   <li>Landing principal profesional.</li>
                   <li>Sistema a elegir: ventas, reservas o menú digital.</li>
                   <li>Hosting administrado y SSL incluido.</li>
-                  <li>Conexión a WhatsApp y analítica básica.</li>
+                  <li>Conexión a WhatsApp y analítica comercial.</li>
+                  <li>
+                    <strong>NEXA Metrics incluido:</strong> dashboard inicial y seguimiento mensual del rendimiento.
+                  </li>
                 </ul>
-                <p>
+                <p className="service-note">
+                  También puedes activar NEXA Metrics como servicio mensual para webs que no fueron hechas por NEXA.
+                </p>
+                <div className="service-card-cta service-card-cta-dual">
                   <Link className="btn" href="/contacto?servicio=landing-plus">
                     Solicitar Landing+
                   </Link>
-                </p>
+                  <Link className="btn" href="/nexa-metrics">
+                    Ver NEXA Metrics
+                  </Link>
+                </div>
               </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="proceso">
-          <div className="container about">
-            <div className="panel">
-              <h2 className="section-title">Nuestro proceso</h2>
-              <p>Te guiamos por un flujo claro de trabajo para evitar demoras y sorpresas.</p>
-              <div className="bullets">
-                <span className="chip">1. Diagnóstico</span>
-                <span className="chip">2. Diseño</span>
-                <span className="chip">3. Desarrollo</span>
-                <span className="chip">4. Lanzamiento</span>
-              </div>
-            </div>
-            <div className="panel">
-              <h3>¿Necesitas algo híbrido?</h3>
-              <p>
-                Podemos crear una propuesta combinando branding, web y software según tus prioridades comerciales.
-              </p>
-              <p>
-                <Link className="btn" href="/contacto">
-                  Pedir propuesta combinada
-                </Link>
-              </p>
             </div>
           </div>
         </section>
