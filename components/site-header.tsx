@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 type Locale = "es" | "en";
@@ -52,6 +53,7 @@ const labels = {
 
 export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const router = useRouter();
   const t = labels[locale];
   const currentRoutes = routes[locale];
 
@@ -63,6 +65,31 @@ export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
   }, [isMobileOpen]);
 
   const closeMenu = () => setIsMobileOpen(false);
+  const targetLocale: Locale = locale === "es" ? "en" : "es";
+  const targetHref = routes[targetLocale][activePage];
+
+  const renderLanguageSwitch = (id: string, onToggle?: () => void) => (
+    <label className="switch-button" htmlFor={id} title={t.lang}>
+      <span className="switch-label switch-label-es">ES</span>
+      <div className="switch-outer">
+        <input
+          id={id}
+          type="checkbox"
+          checked={locale === "en"}
+          aria-label={t.lang}
+          onChange={() => {
+            router.push(targetHref);
+            onToggle?.();
+          }}
+        />
+        <div className="button">
+          <span className="button-toggle" />
+          <span className="button-indicator" />
+        </div>
+      </div>
+      <span className="switch-label switch-label-en">EN</span>
+    </label>
+  );
 
   return (
     <header>
@@ -109,12 +136,7 @@ export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
             {t.menu}
           </button>
           <div className="lang-switch" aria-label={t.lang}>
-            <Link className={`lang-btn ${locale === "es" ? "is-active" : ""}`} href={routes.es[activePage]}>
-              ES
-            </Link>
-            <Link className={`lang-btn ${locale === "en" ? "is-active" : ""}`} href={routes.en[activePage]}>
-              EN
-            </Link>
+            {renderLanguageSwitch(`lang-switch-desktop-${activePage}`)}
           </div>
         </div>
       </div>
@@ -130,12 +152,7 @@ export function SiteHeader({ locale, activePage, ctaLabel }: SiteHeaderProps) {
           {t.contact}
         </Link>
         <div className="lang-switch lang-mobile" aria-label={t.lang}>
-          <Link className={`lang-btn ${locale === "es" ? "is-active" : ""}`} href={routes.es[activePage]} onClick={closeMenu}>
-            ES
-          </Link>
-          <Link className={`lang-btn ${locale === "en" ? "is-active" : ""}`} href={routes.en[activePage]} onClick={closeMenu}>
-            EN
-          </Link>
+          {renderLanguageSwitch(`lang-switch-mobile-${activePage}`, closeMenu)}
         </div>
       </div>
     </header>
