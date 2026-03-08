@@ -2093,16 +2093,21 @@ footer .container {
   width: var(--pill-nav-h);
   height: var(--pill-nav-h);
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(181, 225, 255, 0.34);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, rgba(26, 30, 50, 0.58), rgba(12, 16, 28, 0.72));
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  background: linear-gradient(
+    145deg,
+    rgba(120, 98, 255, 0.24) 0%,
+    rgba(97, 210, 255, 0.14) 52%,
+    rgba(10, 14, 28, 0.3) 100%
+  );
+  backdrop-filter: blur(24px) saturate(175%);
+  -webkit-backdrop-filter: blur(24px) saturate(175%);
   box-shadow:
-    0 14px 30px rgba(5, 9, 20, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 12px 24px rgba(5, 9, 20, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .pill-logo-mark {
@@ -2132,13 +2137,18 @@ footer .container {
   border-radius: 999px;
   height: var(--pill-nav-h);
   padding: 3px;
-  background: linear-gradient(145deg, rgba(26, 30, 50, 0.58), rgba(12, 16, 28, 0.72));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  background: linear-gradient(
+    145deg,
+    rgba(120, 98, 255, 0.2) 0%,
+    rgba(97, 210, 255, 0.12) 56%,
+    rgba(10, 14, 28, 0.28) 100%
+  );
+  border: 1px solid rgba(181, 225, 255, 0.34);
+  backdrop-filter: blur(24px) saturate(175%);
+  -webkit-backdrop-filter: blur(24px) saturate(175%);
   box-shadow:
-    0 14px 30px rgba(5, 9, 20, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 12px 24px rgba(5, 9, 20, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
 }
 
 .pill-list {
@@ -2170,11 +2180,11 @@ footer .container {
   padding: 0 var(--pill-pad-x);
   background: linear-gradient(
     135deg,
-    rgba(111, 85, 255, 0.2) 0%,
-    rgba(95, 208, 255, 0.1) 54%,
-    rgba(9, 13, 24, 0.55) 100%
+    rgba(111, 85, 255, 0.12) 0%,
+    rgba(95, 208, 255, 0.08) 54%,
+    rgba(9, 13, 24, 0.24) 100%
   );
-  border: 1px solid rgba(163, 199, 255, 0.28);
+  border: 1px solid rgba(163, 199, 255, 0.26);
   color: var(--pill-text);
   font-size: 0.9rem;
   font-weight: 700;
@@ -2188,8 +2198,8 @@ footer .container {
   min-height: 100%;
   padding: 0 var(--pill-pad-x);
   box-shadow:
-    0 6px 14px rgba(3, 8, 20, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 6px 14px rgba(3, 8, 20, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 .pill-link:hover,
@@ -2201,15 +2211,15 @@ footer .container {
 .pill-link.is-active {
   background: linear-gradient(
     122deg,
-    rgba(113, 215, 255, 0.34) 0%,
-    rgba(210, 126, 255, 0.38) 50%,
-    rgba(26, 26, 48, 0.7) 100%
+    rgba(113, 215, 255, 0.26) 0%,
+    rgba(210, 126, 255, 0.3) 50%,
+    rgba(26, 26, 48, 0.34) 100%
   );
   border-color: rgba(164, 231, 255, 0.54);
   color: #f4f8ff;
   box-shadow:
-    0 10px 22px rgba(8, 16, 32, 0.42),
-    inset 0 1px 0 rgba(255, 255, 255, 0.44);
+    0 9px 18px rgba(8, 16, 32, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38);
 }
 
 .pill-hover-circle {
@@ -2249,18 +2259,23 @@ footer .container {
   width: var(--pill-nav-h);
   height: var(--pill-nav-h);
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(145deg, rgba(26, 30, 50, 0.58), rgba(12, 16, 28, 0.72));
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  border: 1px solid rgba(181, 225, 255, 0.34);
+  background: linear-gradient(
+    145deg,
+    rgba(120, 98, 255, 0.24) 0%,
+    rgba(97, 210, 255, 0.14) 52%,
+    rgba(10, 14, 28, 0.3) 100%
+  );
+  backdrop-filter: blur(24px) saturate(175%);
+  -webkit-backdrop-filter: blur(24px) saturate(175%);
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
   box-shadow:
-    0 14px 30px rgba(5, 9, 20, 0.36),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 12px 24px rgba(5, 9, 20, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
 }
 
 .pill-hamburger-line {
@@ -2278,10 +2293,15 @@ footer .container {
   right: 0;
   z-index: 97;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(8, 8, 14, 0.94);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 26px 46px rgba(6, 8, 18, 0.44);
+  border: 1px solid rgba(181, 225, 255, 0.28);
+  background: linear-gradient(
+    145deg,
+    rgba(120, 98, 255, 0.2) 0%,
+    rgba(97, 210, 255, 0.12) 56%,
+    rgba(10, 14, 28, 0.32) 100%
+  );
+  backdrop-filter: blur(24px) saturate(170%);
+  box-shadow: 0 20px 36px rgba(6, 8, 18, 0.28);
   padding: 4px;
 }
 
@@ -2300,18 +2320,18 @@ footer .container {
   text-decoration: none;
   background: linear-gradient(
     135deg,
-    rgba(111, 85, 255, 0.2) 0%,
-    rgba(95, 208, 255, 0.1) 54%,
-    rgba(9, 13, 24, 0.55) 100%
+    rgba(111, 85, 255, 0.12) 0%,
+    rgba(95, 208, 255, 0.08) 54%,
+    rgba(9, 13, 24, 0.24) 100%
   );
-  border: 1px solid rgba(163, 199, 255, 0.28);
+  border: 1px solid rgba(163, 199, 255, 0.26);
   color: var(--pill-text);
   font-size: 0.95rem;
   font-weight: 600;
   transition: 0.2s ease;
   box-shadow:
-    0 6px 14px rgba(3, 8, 20, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 6px 14px rgba(3, 8, 20, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 .pill-mobile-link:hover,
