@@ -59,7 +59,7 @@ export default function EnServicesPage() {
                 <ul>
                   <li>Business-driven UX/UI architecture.</li>
                   <li>Responsive implementation and performance optimization.</li>
-                  <li>Technical SEO setup, analytics and content structure.</li>
+                  <li>Technical SEO, analytics and content structure.</li>
                   <li>Production deployment with SSL and domain setup.</li>
                 </ul>
                 <p className="service-card-cta">
@@ -82,7 +82,7 @@ export default function EnServicesPage() {
                 <ul>
                   <li>Admin dashboards and internal tools.</li>
                   <li>External APIs and system integrations.</li>
-                  <li>Critical workflow automation.</li>
+                  <li>Workflow and operations automation.</li>
                   <li>Prioritized ongoing improvement roadmap.</li>
                 </ul>
                 <p className="service-card-cta">
@@ -127,22 +127,13 @@ export default function EnServicesPage() {
                 </div>
                 <ul>
                   <li>Professional primary landing page.</li>
-                  <li>One system included: sales, bookings or digital menu.</li>
-                  <li>Managed hosting and SSL included.</li>
-                  <li>WhatsApp integration and commercial analytics.</li>
-                  <li>
-                    <strong>NEXA Metrics included:</strong> starter dashboard and monthly performance tracking.
-                  </li>
+                  <li>Commercial flow: sales, bookings or digital menu.</li>
+                  <li>Managed hosting, SSL and technical support.</li>
+                  <li><strong>NEXA Metrics included:</strong> starter dashboard and monthly performance review.</li>
                 </ul>
-                <p className="service-note">
-                  You can also activate NEXA Metrics as a monthly service for websites not built by NEXA.
-                </p>
-                <div className="service-card-cta service-card-cta-dual">
+                <div className="service-card-cta">
                   <Link className="btn" href="/en/contact?service=landing-plus">
                     Request Landing+
-                  </Link>
-                  <Link className="btn" href="/en/nexa-metrics">
-                    View NEXA Metrics
                   </Link>
                 </div>
               </article>
