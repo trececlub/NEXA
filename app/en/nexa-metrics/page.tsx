@@ -58,10 +58,14 @@ export default function EnNEXAMetricsPage() {
             <article className="panel metrics-price-card">
               <span className="chip">Monthly plan</span>
               <h3>NEXA Metrics</h3>
+              <p className="metrics-offer">
+                Intro offer: <strong>COP $299,000/month</strong> for the first 3 months
+              </p>
               <p className="metrics-price">
-                <strong>USD $199</strong>
+                <strong>COP $349,000</strong>
                 <span>/month</span>
               </p>
+              <p className="metrics-old-price">Previous regular price: COP $790,000/month</p>
               <p>
                 Includes initial implementation, live dashboard and a monthly executive readout to improve commercial
                 decision-making.

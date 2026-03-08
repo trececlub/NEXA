@@ -913,6 +913,22 @@ section {
   font-size: 1.45rem;
 }
 
+.metrics-offer {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 12px;
+  border: 1px solid rgba(113, 215, 255, 0.42);
+  background: linear-gradient(
+    124deg,
+    rgba(113, 215, 255, 0.24) 0%,
+    rgba(219, 123, 255, 0.22) 52%,
+    rgba(14, 18, 33, 0.54) 100%
+  );
+  color: rgba(235, 243, 255, 0.95);
+  font-size: 0.9rem;
+}
+
 .metrics-price {
   margin: 8px 0 0;
   display: inline-flex;
@@ -929,6 +945,14 @@ section {
 .metrics-price span {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.metrics-old-price {
+  margin: 8px 0 0;
+  color: rgba(199, 210, 234, 0.72);
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
 }
 
 @media (max-width: 860px) {

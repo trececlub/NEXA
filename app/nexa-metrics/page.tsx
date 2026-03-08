@@ -61,10 +61,14 @@ export default function NEXAMetricsPage() {
             <article className="panel metrics-price-card">
               <span className="chip">Plan mensual</span>
               <h3>NEXA Metrics</h3>
+              <p className="metrics-offer">
+                Oferta de entrada: <strong>$299.000 COP/mes</strong> por los primeros 3 meses
+              </p>
               <p className="metrics-price">
-                <strong>$790.000 COP</strong>
+                <strong>$349.000 COP</strong>
                 <span>/mes</span>
               </p>
+              <p className="metrics-old-price">Precio regular anterior: $790.000 COP/mes</p>
               <p>
                 Incluye implementación inicial, panel activo y lectura ejecutiva mensual para mejorar decisiones
                 comerciales.
