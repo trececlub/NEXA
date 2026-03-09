@@ -2680,8 +2680,8 @@ footer .container {
 
 @media (max-width: 860px) {
   :root {
-    --card-unified-bg: linear-gradient(165deg, rgba(18, 24, 42, 0.88), rgba(10, 14, 28, 0.84));
-    --card-unified-border: rgba(194, 222, 255, 0.28);
+    --card-unified-bg: linear-gradient(165deg, rgba(18, 24, 42, 0.72), rgba(10, 14, 28, 0.66));
+    --card-unified-border: rgba(194, 222, 255, 0.22);
   }
 
   .metric,
@@ -2699,8 +2699,8 @@ footer .container {
   .contact-quick-item {
     border-color: var(--card-unified-border);
     background: var(--card-unified-bg);
-    backdrop-filter: blur(16px) saturate(138%);
-    -webkit-backdrop-filter: blur(16px) saturate(138%);
+    backdrop-filter: blur(15px) saturate(132%);
+    -webkit-backdrop-filter: blur(15px) saturate(132%);
   }
 }
 
