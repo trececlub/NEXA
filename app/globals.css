@@ -2678,6 +2678,32 @@ footer .container {
   background: var(--card-unified-bg);
 }
 
+@media (max-width: 860px) {
+  :root {
+    --card-unified-bg: linear-gradient(165deg, rgba(18, 24, 42, 0.88), rgba(10, 14, 28, 0.84));
+    --card-unified-border: rgba(194, 222, 255, 0.28);
+  }
+
+  .metric,
+  .panel,
+  .card,
+  .hp-stage-card,
+  .hp-pillar,
+  .hp-funnel-card,
+  .hp-trend-card,
+  .hp-compare,
+  .hp-metrics-card,
+  .hp-service-main,
+  .hp-deliverables,
+  .hp-stepper-shell,
+  .contact-quick-item {
+    border-color: var(--card-unified-border);
+    background: var(--card-unified-bg);
+    backdrop-filter: blur(16px) saturate(138%);
+    -webkit-backdrop-filter: blur(16px) saturate(138%);
+  }
+}
+
 .hp-stepper-indicators {
   display: flex;
   align-items: center;
