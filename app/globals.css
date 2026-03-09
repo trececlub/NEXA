@@ -2300,25 +2300,20 @@ footer .container {
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.pill-logo-mark {
+.pill-logo-image-wrap {
   width: 21px;
   height: 21px;
-  border-radius: 7px;
-  position: relative;
-  display: block;
-  background: linear-gradient(130deg, var(--accent-3), var(--accent-2) 52%, var(--accent-1));
-  box-shadow: 0 10px 18px rgba(125, 92, 255, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pill-logo-mark::after {
-  content: "N";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 0.58rem;
-  font-weight: 700;
-  color: #10091a;
+.pill-logo-image {
+  width: 21px;
+  height: 21px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(125, 92, 255, 0.4));
 }
 
 .pill-nav-desktop {

@@ -5,6 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexacreativestudio.com"),
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: ["/icon.svg"]
+  },
   title: {
     default: "NEXA",
     template: "%s | NEXA"
