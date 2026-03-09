@@ -1055,6 +1055,12 @@ textarea {
   min-height: 146px;
 }
 
+.contact-phone-row {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 8px;
+}
+
 .contact-actions,
 .social-links {
   display: flex;
@@ -1062,26 +1068,24 @@ textarea {
   gap: 10px;
 }
 
-.note {
-  color: var(--muted);
-  font-size: 0.92rem;
+.contact-submit-message {
+  margin: 4px 0 0;
+  color: rgba(189, 241, 208, 0.95);
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
-.contact-subtitle {
-  margin: 14px 0 8px;
-  font-size: 1rem;
+.contact-icon-btn {
+  width: 46px;
+  min-width: 46px;
+  min-height: 46px;
+  padding: 0;
+  border-radius: 999px;
 }
 
-.contact-direct-list,
-.contact-checklist {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-
-.contact-direct-list li + li,
-.contact-checklist li + li {
-  margin-top: 6px;
+.contact-icon-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 footer {

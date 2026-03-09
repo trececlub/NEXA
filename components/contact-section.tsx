@@ -53,20 +53,14 @@ const copy = {
     waInterest: "Me interesa",
     waButton: "WhatsApp",
     emailButton: "Email",
-    quick1: "Tiempo promedio de respuesta",
-    quick2: "Para definir alcance inicial",
-    quick3: "Con tiempos y entregables",
+    phoneCode: "Indicativo país",
     q1v: "<24h",
     q2v: "1 llamada",
-    q3v: "Propuesta clara",
-    channelsTitle: "Canales disponibles",
-    channel1: "WhatsApp para urgencias y coordinación rápida.",
-    channel2: "Email para enviar brief, referencias y documentos.",
-    channel3: "Instagram para ver estilo, casos y novedades.",
-    checklistTitle: "Para cotizar mejor, incluye:",
-    checklist1: "Objetivo principal del proyecto.",
-    checklist2: "Plazo ideal de lanzamiento.",
-    checklist3: "Rango de inversión aproximado."
+    q3v: "Propuesta",
+    quick1: "Respuesta",
+    quick2: "Alineación",
+    quick3: "Cotización",
+    submitSuccess: "Pronto nos comunicaremos contigo! Gracias por preferirnos."
   },
   en: {
     title: "Contact form",
@@ -88,29 +82,61 @@ const copy = {
     waInterest: "I'm interested in",
     waButton: "WhatsApp",
     emailButton: "Email",
-    quick1: "Average response time",
-    quick2: "To define initial scope",
-    quick3: "Timeline + deliverables",
+    phoneCode: "Country code",
     q1v: "<24h",
     q2v: "1 call",
-    q3v: "Clear quote",
-    channelsTitle: "Available channels",
-    channel1: "WhatsApp for urgent coordination and quick follow-up.",
-    channel2: "Email to send your brief, references and documents.",
-    channel3: "Instagram to explore style, references and updates.",
-    checklistTitle: "To quote better, include:",
-    checklist1: "Main business goal for this project.",
-    checklist2: "Ideal launch timeline.",
-    checklist3: "Estimated budget range."
+    q3v: "Quote",
+    quick1: "Response",
+    quick2: "Alignment",
+    quick3: "Proposal",
+    submitSuccess: "We will contact you soon! Thanks for choosing us."
   }
 } as const;
 
 const WA_NUMBER = "573159836331";
+const countryCodes = ["+57", "+1", "+34", "+52", "+54", "+51", "+56", "+55"];
+
+function WhatsAppIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M12 3.5a8.5 8.5 0 0 0-7.35 12.77L3.5 20.5l4.42-1.16A8.5 8.5 0 1 0 12 3.5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M9.1 9.13c.2-.45.42-.46.6-.47h.51c.09 0 .24.03.37.32.12.29.45 1.12.5 1.2.04.08.07.18.01.29-.06.1-.1.18-.2.28-.1.1-.2.22-.29.29-.1.08-.2.17-.08.34.12.17.54.9 1.16 1.45.8.71 1.48.94 1.7 1.04.23.1.35.08.48-.05.13-.13.54-.63.69-.84.15-.21.3-.18.5-.11.2.07 1.27.6 1.49.7.22.11.37.16.42.26.05.1.05.6-.14 1.19-.2.58-1.15 1.11-1.57 1.16-.4.05-.9.07-1.45-.1a6.68 6.68 0 0 1-2.36-1.33 8.12 8.12 0 0 1-1.8-2.23c-.48-.83-.64-1.48-.5-2.05.13-.57.43-.87.56-1.02Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" stroke="currentColor" strokeWidth="1.6" />
+      <path d="m5 7 7 6 7-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="4" y="4" width="16" height="16" rx="4.5" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="17" cy="7" r="1" fill="currentColor" />
+    </svg>
+  );
+}
 
 export function ContactSection({ locale, sectionId }: ContactSectionProps) {
   const t = copy[locale];
   const services = serviceOptionsByLocale[locale];
   const [service, setService] = useState("");
+  const [phoneCode, setPhoneCode] = useState(locale === "es" ? "+57" : "+1");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const paramKey = locale === "es" ? "servicio" : "service";
 
@@ -134,14 +160,17 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
     const selectedService = String(data.get("service") ?? "");
     const serviceLabel = serviceLabelMap.get(selectedService) ?? selectedService;
 
+    const rawPhone = String(data.get("phone") ?? "").trim();
+    const fullPhone = rawPhone ? `${phoneCode} ${rawPhone}` : "";
     const subject = `${t.mailtoSubjectPrefix} — ${serviceLabel || "general"}`;
     const body =
       `Name: ${encodeURIComponent(String(data.get("name") ?? ""))}%0A` +
       `Email: ${encodeURIComponent(String(data.get("email") ?? ""))}%0A` +
-      `Phone: ${encodeURIComponent(String(data.get("phone") ?? ""))}%0A` +
+      `Phone: ${encodeURIComponent(fullPhone)}%0A` +
       `Service: ${encodeURIComponent(serviceLabel)}%0A` +
       `Message:%0A${encodeURIComponent(String(data.get("message") ?? ""))}`;
 
+    setSubmitMessage(t.submitSuccess);
     window.location.href = `mailto:hola@nexa.studio?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
@@ -152,8 +181,10 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
     const serviceLabel = serviceLabelMap.get(selectedService) ?? selectedService;
     const message = String(data.get("message") ?? "").trim();
 
+    const rawPhone = String(data.get("phone") ?? "").trim();
+    const fullPhone = rawPhone ? `${phoneCode} ${rawPhone}` : "";
     const text = encodeURIComponent(
-      `${t.waIntro} ${name}. ${t.waInterest} ${serviceLabel}. ${message}`.trim()
+      `${t.waIntro} ${name}. ${t.waInterest} ${serviceLabel}. ${message} ${fullPhone}`.trim()
     );
 
     window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
@@ -176,7 +207,22 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
             <input id="email" name="email" type="email" placeholder="you@company.com" required />
 
             <label htmlFor="phone">{t.phone}</label>
-            <input id="phone" name="phone" type="tel" placeholder="+57 315 983 6331" />
+            <div className="contact-phone-row">
+              <select
+                id="phoneCode"
+                name="phoneCode"
+                aria-label={t.phoneCode}
+                value={phoneCode}
+                onChange={(event) => setPhoneCode(event.target.value)}
+              >
+                {countryCodes.map((code) => (
+                  <option key={code} value={code}>
+                    {code}
+                  </option>
+                ))}
+              </select>
+              <input id="phone" name="phone" type="tel" placeholder="315 983 6331" />
+            </div>
 
             <label htmlFor="service">{t.service}</label>
             <select
@@ -201,22 +247,8 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
               <button className="btn primary" type="submit">
                 {t.submit}
               </button>
-              <button
-                className="btn"
-                type="button"
-                onClick={() => openWhatsApp(document.getElementById("contactForm") as HTMLFormElement | null)}
-              >
-                {t.waButton}
-              </button>
-              <Link
-                className="btn"
-                href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </Link>
             </div>
+            {submitMessage ? <p className="contact-submit-message">{submitMessage}</p> : null}
           </form>
         </div>
 
@@ -224,43 +256,35 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
           <h3 style={{ marginTop: 0 }}>{t.directTitle}</h3>
           <p>{t.directText}</p>
 
-          <h4 className="contact-subtitle">{t.channelsTitle}</h4>
-          <ul className="contact-direct-list">
-            <li>{t.channel1}</li>
-            <li>{t.channel2}</li>
-            <li>{t.channel3}</li>
-          </ul>
-
           <div className="social-links">
             <button
-              className="btn"
+              className="btn contact-icon-btn"
+              aria-label={t.waButton}
+              title={t.waButton}
               type="button"
               onClick={() => openWhatsApp(document.getElementById("contactForm") as HTMLFormElement | null)}
             >
-              {t.waButton}
+              <WhatsAppIcon />
             </button>
-            <Link className="btn" href={`mailto:hola@nexa.studio?subject=${encodeURIComponent(t.emailSubject)}`}>
-              {t.emailButton}
+            <Link
+              className="btn contact-icon-btn"
+              aria-label={t.emailButton}
+              title={t.emailButton}
+              href={`mailto:hola@nexa.studio?subject=${encodeURIComponent(t.emailSubject)}`}
+            >
+              <MailIcon />
             </Link>
             <Link
-              className="btn"
+              className="btn contact-icon-btn"
+              aria-label="Instagram"
+              title="Instagram"
               href="https://www.instagram.com/nexastudio_co?igsh=bXZnNjF3cXYzYmUy&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <InstagramIcon />
             </Link>
           </div>
-          <p className="note">
-            WhatsApp: <code>+57 315 983 6331</code>
-          </p>
-
-          <h4 className="contact-subtitle">{t.checklistTitle}</h4>
-          <ul className="contact-checklist">
-            <li>{t.checklist1}</li>
-            <li>{t.checklist2}</li>
-            <li>{t.checklist3}</li>
-          </ul>
 
           <div className="stats-strip" style={{ marginTop: 18 }}>
             <div className="metric">
