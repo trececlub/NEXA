@@ -55,11 +55,11 @@ const copy = {
     emailButton: "Email",
     phoneCode: "Indicativo país",
     q1v: "<24h",
-    q2v: "1 llamada",
-    q3v: "Propuesta",
-    quick1: "Respuesta",
-    quick2: "Alineación",
-    quick3: "Cotización",
+    q2v: "20-30 min",
+    q3v: "24-48h",
+    quick1: "Tiempo de respuesta",
+    quick2: "Llamada inicial",
+    quick3: "Entrega de propuesta",
     submitSuccess: "Pronto nos comunicaremos contigo! Gracias por preferirnos."
   },
   en: {
@@ -84,11 +84,11 @@ const copy = {
     emailButton: "Email",
     phoneCode: "Country code",
     q1v: "<24h",
-    q2v: "1 call",
-    q3v: "Quote",
-    quick1: "Response",
-    quick2: "Alignment",
-    quick3: "Proposal",
+    q2v: "20-30 min",
+    q3v: "24-48h",
+    quick1: "Response time",
+    quick2: "Discovery call",
+    quick3: "Proposal delivery",
     submitSuccess: "We will contact you soon! Thanks for choosing us."
   }
 } as const;
@@ -286,18 +286,18 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
             </Link>
           </div>
 
-          <div className="stats-strip" style={{ marginTop: 18 }}>
-            <div className="metric">
-              <strong>{t.q1v}</strong>
+          <div className="contact-quick-grid">
+            <div className="contact-quick-item">
               <span>{t.quick1}</span>
+              <strong>{t.q1v}</strong>
             </div>
-            <div className="metric">
-              <strong>{t.q2v}</strong>
+            <div className="contact-quick-item">
               <span>{t.quick2}</span>
+              <strong>{t.q2v}</strong>
             </div>
-            <div className="metric">
-              <strong>{t.q3v}</strong>
+            <div className="contact-quick-item">
               <span>{t.quick3}</span>
+              <strong>{t.q3v}</strong>
             </div>
           </div>
         </div>

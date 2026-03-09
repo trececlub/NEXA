@@ -662,6 +662,10 @@ section {
   gap: 22px;
 }
 
+.contact-grid {
+  align-items: start;
+}
+
 .panel,
 .card,
 .tile {
@@ -1066,6 +1070,34 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.contact-quick-grid {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.contact-quick-item {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-quick-item span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-quick-item strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: -0.01em;
 }
 
 .contact-submit-message {
