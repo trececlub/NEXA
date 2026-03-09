@@ -58,6 +58,9 @@ export default function ServicesPage() {
                   <li>Implementación responsive y optimización de velocidad.</li>
                   <li>SEO técnico, analytics y estructura de contenidos.</li>
                   <li>Publicación con SSL y dominio configurado.</li>
+                  <li>
+                    <strong>Beneficio bundle:</strong> 20% OFF en NEXA Metrics al contratar este servicio.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=diseno-web">
@@ -80,6 +83,9 @@ export default function ServicesPage() {
                   <li>Integraciones con APIs y sistemas externos.</li>
                   <li>Automatización de tareas y flujos operativos.</li>
                   <li>Roadmap continuo con mejoras priorizadas.</li>
+                  <li>
+                    <strong>Beneficio bundle:</strong> 20% OFF en NEXA Metrics al contratar este servicio.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=software-a-medida">
@@ -102,6 +108,9 @@ export default function ServicesPage() {
                   <li>Paleta, tipografía y tono de marca.</li>
                   <li>Brandbook y piezas base para redes.</li>
                   <li>Guías de uso para implementación.</li>
+                  <li>
+                    <strong>Beneficio bundle:</strong> 20% OFF en NEXA Metrics al contratar este servicio.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/contacto?servicio=branding">

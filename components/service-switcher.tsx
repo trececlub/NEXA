@@ -30,7 +30,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "UX enfocada en intención comercial",
         "Diseño visual premium y sistema reusable",
         "Desarrollo Next.js optimizado",
-        "Medición con eventos y analítica base"
+        "Medición con eventos y analítica base",
+        "20% OFF en NEXA Metrics al contratar este servicio"
       ]
     },
     {
@@ -45,7 +46,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "Logo y sistema gráfico escalable",
         "Paleta, tipografías y reglas de uso",
         "Manual de marca práctico",
-        "Templates iniciales para redes"
+        "Templates iniciales para redes",
+        "20% OFF en NEXA Metrics al contratar este servicio"
       ]
     },
     {
@@ -60,7 +62,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "Mapeo de flujo y arquitectura funcional",
         "Paneles administrativos y módulos internos",
         "Integraciones con APIs y herramientas externas",
-        "Roadmap de mejoras y soporte"
+        "Roadmap de mejoras y soporte",
+        "20% OFF en NEXA Metrics al contratar este servicio"
       ]
     },
     {
@@ -92,7 +95,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "Intent-driven UX structure",
         "Premium visual system",
         "Optimized Next.js implementation",
-        "Event tracking and analytics baseline"
+        "Event tracking and analytics baseline",
+        "20% OFF on NEXA Metrics when hiring this service"
       ]
     },
     {
@@ -107,7 +111,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "Scalable logo and visual identity",
         "Color, type and application rules",
         "Practical brand guideline",
-        "Starter social templates"
+        "Starter social templates",
+        "20% OFF on NEXA Metrics when hiring this service"
       ]
     },
     {
@@ -122,7 +127,8 @@ const servicesByLocale: Record<Locale, Service[]> = {
         "Workflow mapping and product architecture",
         "Admin dashboards and internal modules",
         "API integrations",
-        "Improvement roadmap and support"
+        "Improvement roadmap and support",
+        "20% OFF on NEXA Metrics when hiring this service"
       ]
     },
     {

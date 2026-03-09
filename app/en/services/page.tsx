@@ -57,6 +57,9 @@ export default function EnServicesPage() {
                   <li>Responsive implementation and performance optimization.</li>
                   <li>Technical SEO, analytics and content structure.</li>
                   <li>Production deployment with SSL and domain setup.</li>
+                  <li>
+                    <strong>Bundle benefit:</strong> 20% OFF on NEXA Metrics when hiring this service.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=web-design">
@@ -79,6 +82,9 @@ export default function EnServicesPage() {
                   <li>External APIs and system integrations.</li>
                   <li>Workflow and operations automation.</li>
                   <li>Prioritized ongoing improvement roadmap.</li>
+                  <li>
+                    <strong>Bundle benefit:</strong> 20% OFF on NEXA Metrics when hiring this service.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=custom-software">
@@ -101,6 +107,9 @@ export default function EnServicesPage() {
                   <li>Color, typography and tone framework.</li>
                   <li>Brandbook and social media starter assets.</li>
                   <li>Implementation guidelines for consistency.</li>
+                  <li>
+                    <strong>Bundle benefit:</strong> 20% OFF on NEXA Metrics when hiring this service.
+                  </li>
                 </ul>
                 <div className="service-card-cta">
                   <Link className="btn primary" href="/en/contact?service=branding">
