@@ -2312,7 +2312,15 @@ footer .container {
   width: 21px;
   height: 21px;
   display: block;
-  object-fit: contain;
+  background: #f5f8ff;
+  -webkit-mask-image: url("/nexa-icon.svg");
+  mask-image: url("/nexa-icon.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   filter: drop-shadow(0 8px 14px rgba(125, 92, 255, 0.4));
 }
 

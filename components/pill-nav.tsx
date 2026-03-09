@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 
@@ -309,7 +308,7 @@ export function PillNav({
           ref={logoRef}
         >
           <span className="pill-logo-image-wrap" ref={logoMarkRef} aria-hidden="true">
-            <Image src="/nexa-icon.svg" alt="" width={21} height={21} className="pill-logo-image" priority />
+            <span className="pill-logo-image" />
           </span>
         </Link>
 
