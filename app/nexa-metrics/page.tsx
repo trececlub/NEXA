@@ -36,9 +36,6 @@ export default function NEXAMetricsPage() {
               <Link className="btn primary" href="/contacto?servicio=nexa-metrics">
                 Activar NEXA Metrics
               </Link>
-              <Link className="btn" href="/contacto">
-                Resolver dudas
-              </Link>
             </div>
           </div>
         </section>
@@ -63,6 +60,10 @@ export default function NEXAMetricsPage() {
               <h3>NEXA Metrics</h3>
               <p className="metrics-offer">
                 Oferta de entrada: <strong>$299.000 COP/mes</strong> por los primeros 3 meses
+              </p>
+              <p className="metrics-bundle-offer">
+                Al contratar cualquier servicio NEXA: <strong>20% OFF</strong> en NEXA Metrics (
+                <strong>$279.000 COP/mes</strong>)
               </p>
               <p className="metrics-price">
                 <strong>$349.000 COP</strong>
@@ -111,6 +112,10 @@ export default function NEXAMetricsPage() {
               </li>
               <li>
                 Oferta de entrada: <strong>$299.000 COP/mes</strong> por los primeros 3 meses para clientes nuevos.
+              </li>
+              <li>
+                Beneficio por bundle: <strong>20% OFF</strong> en NEXA Metrics al contratar cualquier servicio NEXA
+                (valor de referencia: <strong>$279.000 COP/mes</strong>).
               </li>
               <li>Facturación mensual anticipada por proyecto activo.</li>
               <li>Incluye 1 revisión mensual ejecutiva y plan de acciones priorizadas.</li>

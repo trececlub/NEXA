@@ -954,6 +954,22 @@ section {
   font-size: 0.9rem;
 }
 
+.metrics-bundle-offer {
+  margin: 8px 0 0;
+  padding: 8px 10px;
+  width: fit-content;
+  border-radius: 12px;
+  border: 1px solid rgba(168, 236, 180, 0.42);
+  background: linear-gradient(
+    124deg,
+    rgba(96, 212, 128, 0.2) 0%,
+    rgba(113, 215, 255, 0.14) 52%,
+    rgba(12, 24, 18, 0.46) 100%
+  );
+  color: rgba(227, 247, 234, 0.95);
+  font-size: 0.9rem;
+}
+
 .metrics-price {
   margin: 8px 0 0;
   display: inline-flex;

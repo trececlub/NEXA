@@ -46,7 +46,6 @@ export default function ServicesPage() {
             <div className="grid-3 services-grid">
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Presencia comercial</span>
                   <h3>Diseño web</h3>
                   <p>Web corporativa o comercial enfocada en conversión y credibilidad.</p>
                   <p className="service-price">
@@ -69,7 +68,6 @@ export default function ServicesPage() {
 
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Operación digital</span>
                   <h3>Software a medida</h3>
                   <p>Herramientas internas que reducen fricción operativa y escalan procesos.</p>
                   <p className="service-price">
@@ -92,7 +90,6 @@ export default function ServicesPage() {
 
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Posicionamiento</span>
                   <h3>Branding</h3>
                   <p>Construcción de marca para posicionarte con identidad y coherencia visual.</p>
                   <p className="service-price">
@@ -115,7 +112,6 @@ export default function ServicesPage() {
 
               <article className="card service-card is-featured">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Oferta destacada</span>
                   <span className="service-popular-badge">Más comprado</span>
                   <h3>Landing+</h3>
                   <p>Presencia web rápida con sistema comercial integrado para captar y convertir.</p>

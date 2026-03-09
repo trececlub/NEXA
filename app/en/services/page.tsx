@@ -45,7 +45,6 @@ export default function EnServicesPage() {
             <div className="grid-3 services-grid">
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Commercial presence</span>
                   <h3>Web design</h3>
                   <p>Business websites focused on conversion, trust and speed.</p>
                   <p className="service-price">
@@ -68,7 +67,6 @@ export default function EnServicesPage() {
 
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Digital operations</span>
                   <h3>Custom software</h3>
                   <p>Operational tools that remove bottlenecks and improve scale.</p>
                   <p className="service-price">
@@ -91,7 +89,6 @@ export default function EnServicesPage() {
 
               <article className="card service-card">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Positioning</span>
                   <h3>Branding</h3>
                   <p>Identity systems that make your company look consistent and memorable.</p>
                   <p className="service-price">
@@ -114,7 +111,6 @@ export default function EnServicesPage() {
 
               <article className="card service-card is-featured">
                 <div className="service-card-head">
-                  <span className="chip service-chip">Featured offer</span>
                   <span className="service-popular-badge">Most purchased</span>
                   <h3>Landing+</h3>
                   <p>Fast commercial web setup with an integrated lead and conversion flow.</p>

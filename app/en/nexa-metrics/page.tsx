@@ -35,9 +35,6 @@ export default function EnNEXAMetricsPage() {
               <Link className="btn primary" href="/en/contact?service=nexa-metrics">
                 Activate NEXA Metrics
               </Link>
-              <Link className="btn" href="/en/contact">
-                Ask questions
-              </Link>
             </div>
           </div>
         </section>
@@ -60,6 +57,10 @@ export default function EnNEXAMetricsPage() {
               <h3>NEXA Metrics</h3>
               <p className="metrics-offer">
                 Intro offer: <strong>COP $299,000/month</strong> for the first 3 months
+              </p>
+              <p className="metrics-bundle-offer">
+                If you purchase any NEXA service: <strong>20% OFF</strong> on NEXA Metrics (
+                <strong>COP $279,000/month</strong>)
               </p>
               <p className="metrics-price">
                 <strong>COP $349,000</strong>
@@ -108,6 +109,10 @@ export default function EnNEXAMetricsPage() {
               </li>
               <li>
                 Intro offer: <strong>COP $299,000/month</strong> for the first 3 months for new clients.
+              </li>
+              <li>
+                Bundle benefit: <strong>20% OFF</strong> on NEXA Metrics when hiring any NEXA service (reference value:{" "}
+                <strong>COP $279,000/month</strong>).
               </li>
               <li>Monthly billing in advance per active project.</li>
               <li>Includes one monthly executive review and prioritized action plan.</li>
