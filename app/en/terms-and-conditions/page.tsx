@@ -86,8 +86,8 @@ export default function EnTermsAndConditionsPage() {
                 accepted commercial proposal.
               </p>
               <p>
-                The intro offer of <strong>COP $299,000/month</strong> applies for the first 3 months to new clients.
-                After that period, the plan moves to <strong>COP $349,000/month</strong>, unless otherwise agreed in
+                The intro offer of <strong>USD $75/month</strong> applies for the first 3 months to new clients.
+                After that period, the plan moves to <strong>USD $89/month</strong>, unless otherwise agreed in
                 writing.
               </p>
               <p>
