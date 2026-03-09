@@ -35,6 +35,7 @@ const serviceOptionsByLocale: Record<Locale, ServiceOption[]> = {
 const copy = {
   es: {
     title: "Formulario de contacto",
+    formIntro: "Comparte contexto, objetivo y tipo de servicio. Te respondemos con enfoque comercial, no con plantillas.",
     name: "Nombre",
     email: "Email",
     phone: "Teléfono (opcional)",
@@ -57,10 +58,19 @@ const copy = {
     quick3: "Con tiempos y entregables",
     q1v: "<24h",
     q2v: "1 llamada",
-    q3v: "Propuesta clara"
+    q3v: "Propuesta clara",
+    channelsTitle: "Canales disponibles",
+    channel1: "WhatsApp para urgencias y coordinación rápida.",
+    channel2: "Email para enviar brief, referencias y documentos.",
+    channel3: "Instagram para ver estilo, casos y novedades.",
+    checklistTitle: "Para cotizar mejor, incluye:",
+    checklist1: "Objetivo principal del proyecto.",
+    checklist2: "Plazo ideal de lanzamiento.",
+    checklist3: "Rango de inversión aproximado."
   },
   en: {
     title: "Contact form",
+    formIntro: "Share your context, goal and service interest. We reply with a commercial-focused approach.",
     name: "Name",
     email: "Email",
     phone: "Phone (optional)",
@@ -83,7 +93,15 @@ const copy = {
     quick3: "Timeline + deliverables",
     q1v: "<24h",
     q2v: "1 call",
-    q3v: "Clear quote"
+    q3v: "Clear quote",
+    channelsTitle: "Available channels",
+    channel1: "WhatsApp for urgent coordination and quick follow-up.",
+    channel2: "Email to send your brief, references and documents.",
+    channel3: "Instagram to explore style, references and updates.",
+    checklistTitle: "To quote better, include:",
+    checklist1: "Main business goal for this project.",
+    checklist2: "Ideal launch timeline.",
+    checklist3: "Estimated budget range."
   }
 } as const;
 
@@ -148,6 +166,8 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
           <h2 className="section-title" style={{ marginTop: 0 }}>
             {t.title}
           </h2>
+          <p className="contact-form-intro">{t.formIntro}</p>
+
           <form id="contactForm" aria-label={t.title} onSubmit={handleSubmit}>
             <label htmlFor="name">{t.name}</label>
             <input id="name" name="name" placeholder={t.name} required />
@@ -203,6 +223,14 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
         <div className="panel">
           <h3 style={{ marginTop: 0 }}>{t.directTitle}</h3>
           <p>{t.directText}</p>
+
+          <h4 className="contact-subtitle">{t.channelsTitle}</h4>
+          <ul className="contact-direct-list">
+            <li>{t.channel1}</li>
+            <li>{t.channel2}</li>
+            <li>{t.channel3}</li>
+          </ul>
+
           <div className="social-links">
             <button
               className="btn"
@@ -226,6 +254,13 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
           <p className="note">
             WhatsApp: <code>+57 315 983 6331</code>
           </p>
+
+          <h4 className="contact-subtitle">{t.checklistTitle}</h4>
+          <ul className="contact-checklist">
+            <li>{t.checklist1}</li>
+            <li>{t.checklist2}</li>
+            <li>{t.checklist3}</li>
+          </ul>
 
           <div className="stats-strip" style={{ marginTop: 18 }}>
             <div className="metric">

@@ -22,23 +22,39 @@ export default function EnContactPage() {
       <SiteHeader locale="en" activePage="contact" ctaLabel="Send brief" />
 
       <main id="content">
-        <section className="hero">
-          <div className="container">
-            <span className="kicker">Contact</span>
-            <h1 className="title">
-              Tell us about your project and get a <span className="grad">clear execution plan</span>
-            </h1>
-            <p className="subtitle">
-              If you prefer a faster route, message us on WhatsApp and share your idea in under one minute.
-            </p>
-            <div className="hero-actions">
-              <Link className="btn primary" href="#form">
-                Fill the form
-              </Link>
-              <Link className="btn" href="https://wa.me/573159836331" target="_blank" rel="noopener noreferrer">
-                Chat on WhatsApp
-              </Link>
+        <section className="hero contact-hero">
+          <div className="container contact-hero-grid">
+            <div>
+              <span className="kicker">Contact</span>
+              <h1 className="title">
+                Tell us about your project and get a <span className="grad">clear execution plan</span>
+              </h1>
+              <p className="subtitle">
+                If you prefer a faster route, message us on WhatsApp and share your idea in under one minute.
+              </p>
+              <div className="hero-actions">
+                <Link className="btn primary" href="#form">
+                  Fill the form
+                </Link>
+                <Link className="btn" href="https://wa.me/573159836331" target="_blank" rel="noopener noreferrer">
+                  Chat on WhatsApp
+                </Link>
+              </div>
+              <div className="bullets">
+                <span className="chip">Response in less than 24h</span>
+                <span className="chip">Initial commercial diagnosis</span>
+                <span className="chip">Clear scope and timeline proposal</span>
+              </div>
             </div>
+
+            <article className="panel contact-hero-panel">
+              <h3>What happens after you send your brief</h3>
+              <ol>
+                <li>We review your goals, context and commercial priorities.</li>
+                <li>We contact you to validate the initial scope.</li>
+                <li>You receive a clear proposal with investment and execution plan.</li>
+              </ol>
+            </article>
           </div>
         </section>
 
