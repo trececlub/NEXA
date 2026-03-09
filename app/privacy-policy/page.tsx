@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
       title="Privacy Policy"
       subtitle="Así tratamos tus datos cuando navegas, nos escribes o solicitas una propuesta."
       updatedLabel="Última actualización"
-      updatedDate="8 de marzo de 2026"
+      updatedDate="9 de marzo de 2026"
       sections={[
         {
           title: "1. Responsable del tratamiento",
@@ -122,12 +122,17 @@ export default function PrivacyPolicyPage() {
           )
         },
         {
-          title: "8. Tratamiento de datos en NEXA Metrics",
+          title: "8. Tratamiento de datos en NEXA Metrics y Landing+",
           body: (
             <>
               <p>
                 Si activas NEXA Metrics, podemos procesar datos de rendimiento comercial del sitio (eventos, fuentes,
                 conversiones y comportamiento de navegación) para entregar análisis y recomendaciones.
+              </p>
+              <p>
+                En Landing+ con mantenimiento activo, también podemos tratar datos operativos de autogestión (por
+                ejemplo: horarios, catálogo de productos o disponibilidad de reservas) para ejecutar cambios solicitados
+                y mantener continuidad del servicio.
               </p>
               <p>
                 El cliente es responsable de contar con base legal y avisos de consentimiento cuando su sitio use

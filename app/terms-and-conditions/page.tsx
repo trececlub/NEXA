@@ -20,7 +20,7 @@ export default function TermsAndConditionsPage() {
       title="Terms and Conditions"
       subtitle="Reglas de uso del sitio y lineamientos generales para servicios contratados con NEXA."
       updatedLabel="Última actualización"
-      updatedDate="8 de marzo de 2026"
+      updatedDate="9 de marzo de 2026"
       sections={[
         {
           title: "1. Aceptación y alcance",
@@ -81,7 +81,27 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "5. Condiciones específicas de NEXA Metrics",
+          title: "5. Condiciones específicas de Landing+",
+          body: (
+            <>
+              <p>
+                Landing+ contempla un costo de despliegue único de <strong>$790.000 COP</strong> y planes de
+                mantenimiento mensual según nivel de soporte.
+              </p>
+              <p>
+                Plan Base: <strong>$199.000 COP/mes</strong>. Plan Acompañado: <strong>$249.000 COP/mes</strong>.
+                Ambos incluyen hosting administrado, SSL, gestión de dominio/DNS, monitoreo técnico y respaldo
+                operativo.
+              </p>
+              <p>
+                Rediseños completos, integraciones nuevas de alta complejidad o desarrollo de funcionalidades no
+                incluidas se cotizan como alcance adicional.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "6. Condiciones específicas de NEXA Metrics",
           body: (
             <>
               <p>
@@ -101,7 +121,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "6. Responsabilidad y disponibilidad",
+          title: "7. Responsabilidad y disponibilidad",
           body: (
             <>
               <p>
@@ -116,7 +136,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "7. Enlaces externos",
+          title: "8. Enlaces externos",
           body: (
             <p>
               Este sitio puede contener enlaces a plataformas de terceros. NEXA no controla ni asume responsabilidad
@@ -125,7 +145,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "8. Ley aplicable",
+          title: "9. Ley aplicable",
           body: (
             <>
               <p>
@@ -139,7 +159,7 @@ export default function TermsAndConditionsPage() {
           )
         },
         {
-          title: "9. Contacto legal",
+          title: "10. Contacto legal",
           body: (
             <p>
               Para consultas sobre estos términos escribe a <strong>hola@nexa.studio</strong>.

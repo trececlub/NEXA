@@ -115,15 +115,26 @@ export default function ServicesPage() {
                   <span className="service-popular-badge">Más comprado</span>
                   <h3>Landing+</h3>
                   <p>Presencia web rápida con sistema comercial integrado para captar y convertir.</p>
+                  <p className="service-price">
+                    <span>Despliegue único</span>
+                    <strong>$790.000 COP</strong>
+                  </p>
                   <p className="service-price is-monthly">
-                    <span>Mensual</span>
-                    <strong>$790.000 COP/mes</strong>
+                    <span>Mantenimiento base</span>
+                    <strong>$199.000 COP/mes</strong>
+                  </p>
+                  <p className="service-price is-monthly">
+                    <span>Mantenimiento acompañado</span>
+                    <strong>$249.000 COP/mes</strong>
                   </p>
                 </div>
                 <ul>
                   <li>Landing principal profesional.</li>
                   <li>Sistema comercial: ventas, reservas o menú digital.</li>
-                  <li>Hosting administrado, SSL y soporte técnico.</li>
+                  <li>
+                    Hosting administrado: NEXA gestiona infraestructura, SSL, dominio/DNS, monitoreo y respaldo
+                    técnico.
+                  </li>
                   <li>
                     <strong>NEXA Metrics incluido:</strong> dashboard inicial y lectura mensual de rendimiento.
                   </li>

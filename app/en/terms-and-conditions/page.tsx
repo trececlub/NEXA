@@ -20,7 +20,7 @@ export default function EnTermsAndConditionsPage() {
       title="Terms and Conditions"
       subtitle="Website use rules and general contracting terms for NEXA services."
       updatedLabel="Last updated"
-      updatedDate="March 8, 2026"
+      updatedDate="March 9, 2026"
       sections={[
         {
           title: "1. Acceptance and scope",
@@ -78,7 +78,26 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "5. NEXA Metrics specific conditions",
+          title: "5. Landing+ specific conditions",
+          body: (
+            <>
+              <p>
+                Landing+ has a one-time deployment fee of <strong>USD $199</strong> and monthly maintenance plans
+                based on support level.
+              </p>
+              <p>
+                Base plan: <strong>USD $49/month</strong>. Guided plan: <strong>USD $62/month</strong>. Both include
+                managed hosting, SSL, domain/DNS management, technical monitoring and operational backup.
+              </p>
+              <p>
+                Full redesigns, advanced new integrations and custom features outside the agreed scope are quoted as
+                additional work.
+              </p>
+            </>
+          )
+        },
+        {
+          title: "6. NEXA Metrics specific conditions",
           body: (
             <>
               <p>
@@ -98,7 +117,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "6. Liability and availability",
+          title: "7. Liability and availability",
           body: (
             <>
               <p>
@@ -113,7 +132,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "7. External links",
+          title: "8. External links",
           body: (
             <p>
               This website may include links to third-party services. NEXA does not control or assume responsibility
@@ -122,7 +141,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "8. Governing law",
+          title: "9. Governing law",
           body: (
             <>
               <p>
@@ -134,7 +153,7 @@ export default function EnTermsAndConditionsPage() {
           )
         },
         {
-          title: "9. Legal contact",
+          title: "10. Legal contact",
           body: (
             <p>
               For legal inquiries regarding these terms, contact <strong>hola@nexa.studio</strong>.

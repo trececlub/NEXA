@@ -114,15 +114,23 @@ export default function EnServicesPage() {
                   <span className="service-popular-badge">Most purchased</span>
                   <h3>Landing+</h3>
                   <p>Fast commercial web setup with an integrated lead and conversion flow.</p>
+                  <p className="service-price">
+                    <span>One-time deployment</span>
+                    <strong>USD $199</strong>
+                  </p>
                   <p className="service-price is-monthly">
-                    <span>Monthly</span>
-                    <strong>USD $199/month</strong>
+                    <span>Base maintenance</span>
+                    <strong>USD $49/month</strong>
+                  </p>
+                  <p className="service-price is-monthly">
+                    <span>Guided maintenance</span>
+                    <strong>USD $62/month</strong>
                   </p>
                 </div>
                 <ul>
                   <li>Professional primary landing page.</li>
                   <li>Commercial flow: sales, bookings or digital menu.</li>
-                  <li>Managed hosting, SSL and technical support.</li>
+                  <li>Managed hosting: infrastructure, SSL, domain/DNS, monitoring and technical backup.</li>
                   <li><strong>NEXA Metrics included:</strong> starter dashboard and monthly performance review.</li>
                 </ul>
                 <div className="service-card-cta">

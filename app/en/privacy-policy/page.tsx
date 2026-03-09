@@ -20,7 +20,7 @@ export default function EnPrivacyPolicyPage() {
       title="Privacy Policy"
       subtitle="How we process your data when you browse, contact us or request a proposal."
       updatedLabel="Last updated"
-      updatedDate="March 8, 2026"
+      updatedDate="March 9, 2026"
       sections={[
         {
           title: "1. Data controller",
@@ -118,12 +118,17 @@ export default function EnPrivacyPolicyPage() {
           )
         },
         {
-          title: "8. Data processing in NEXA Metrics",
+          title: "8. Data processing in NEXA Metrics and Landing+",
           body: (
             <>
               <p>
                 If you activate NEXA Metrics, we may process commercial performance data (events, traffic sources,
                 conversions and behavioral usage signals) to provide analysis and optimization recommendations.
+              </p>
+              <p>
+                For Landing+ clients with active maintenance, we may also process operational self-service data (for
+                example: business hours, product catalog updates or booking availability) to execute requested changes
+                and keep service continuity.
               </p>
               <p>
                 The client is responsible for implementing proper legal notices and consent mechanisms on their own
