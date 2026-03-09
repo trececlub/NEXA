@@ -39,11 +39,6 @@ export default function EnContactPage() {
                 Chat on WhatsApp
               </Link>
             </div>
-            <div className="bullets">
-              <span className="chip">Response in less than 24h</span>
-              <span className="chip">Initial commercial diagnosis</span>
-              <span className="chip">Clear scope and timeline proposal</span>
-            </div>
           </div>
         </section>
 

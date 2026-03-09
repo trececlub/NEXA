@@ -40,11 +40,6 @@ export default function ContactPage() {
                 Escribir por WhatsApp
               </Link>
             </div>
-            <div className="bullets">
-              <span className="chip">Respuesta en menos de 24h</span>
-              <span className="chip">Diagnóstico comercial inicial</span>
-              <span className="chip">Propuesta con alcance y tiempos</span>
-            </div>
           </div>
         </section>
 
