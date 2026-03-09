@@ -2604,6 +2604,32 @@ footer .container {
     display: flex;
     justify-content: flex-start;
   }
+
+  .pill-mobile-menu {
+    border-color: rgba(177, 217, 255, 0.38);
+    background: linear-gradient(
+      150deg,
+      rgba(18, 24, 44, 0.95) 0%,
+      rgba(20, 24, 44, 0.93) 54%,
+      rgba(10, 14, 26, 0.95) 100%
+    );
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    box-shadow:
+      0 24px 40px rgba(5, 8, 18, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  }
+
+  .pill-mobile-link {
+    background: linear-gradient(
+      138deg,
+      rgba(23, 30, 52, 0.9) 0%,
+      rgba(17, 24, 43, 0.9) 56%,
+      rgba(11, 16, 30, 0.9) 100%
+    );
+    border-color: rgba(168, 204, 255, 0.34);
+    color: rgba(243, 248, 255, 0.96);
+  }
 }
 
 /* Process Stepper */
