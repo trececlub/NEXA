@@ -302,6 +302,14 @@ const countryCodes = [
   "+998"
 ];
 
+const normalizeDialCode = (value: string) => {
+  const cleaned = value.replace(/[^\d+]/g, "");
+  if (!cleaned) return "";
+  const digitsOnly = cleaned.replace(/\+/g, "");
+  if (!digitsOnly) return "";
+  return `+${digitsOnly}`;
+};
+
 function WhatsAppIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -340,8 +348,9 @@ function InstagramIcon() {
 export function ContactSection({ locale, sectionId }: ContactSectionProps) {
   const t = copy[locale];
   const services = serviceOptionsByLocale[locale];
+  const defaultCode = locale === "es" ? "+57" : "+1";
   const [service, setService] = useState("");
-  const [phoneCode, setPhoneCode] = useState(locale === "es" ? "+57" : "+1");
+  const [phoneCode, setPhoneCode] = useState(defaultCode);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const paramKey = locale === "es" ? "servicio" : "service";
@@ -367,7 +376,8 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
     const serviceLabel = serviceLabelMap.get(selectedService) ?? selectedService;
 
     const rawPhone = String(data.get("phone") ?? "").trim();
-    const fullPhone = rawPhone ? `${phoneCode} ${rawPhone}` : "";
+    const dialCode = normalizeDialCode(phoneCode) || defaultCode;
+    const fullPhone = rawPhone ? `${dialCode} ${rawPhone}` : "";
     const subject = `${t.mailtoSubjectPrefix} — ${serviceLabel || "general"}`;
     const body =
       `Name: ${encodeURIComponent(String(data.get("name") ?? ""))}%0A` +
@@ -388,7 +398,8 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
     const message = String(data.get("message") ?? "").trim();
 
     const rawPhone = String(data.get("phone") ?? "").trim();
-    const fullPhone = rawPhone ? `${phoneCode} ${rawPhone}` : "";
+    const dialCode = normalizeDialCode(phoneCode) || defaultCode;
+    const fullPhone = rawPhone ? `${dialCode} ${rawPhone}` : "";
     const text = encodeURIComponent(
       `${t.waIntro} ${name}. ${t.waInterest} ${serviceLabel}. ${message} ${fullPhone}`.trim()
     );
@@ -414,19 +425,25 @@ export function ContactSection({ locale, sectionId }: ContactSectionProps) {
 
             <label htmlFor="phone">{t.phone}</label>
             <div className="contact-phone-row">
-              <select
+              <input
                 id="phoneCode"
                 name="phoneCode"
+                type="text"
+                inputMode="tel"
+                list="countryCodeList"
+                placeholder={defaultCode}
                 aria-label={t.phoneCode}
                 value={phoneCode}
-                onChange={(event) => setPhoneCode(event.target.value)}
-              >
+                onChange={(event) => setPhoneCode(normalizeDialCode(event.target.value))}
+                onBlur={() => {
+                  if (!phoneCode.trim()) setPhoneCode(defaultCode);
+                }}
+              />
+              <datalist id="countryCodeList">
                 {countryCodes.map((code) => (
-                  <option key={code} value={code}>
-                    {code}
-                  </option>
+                  <option key={code} value={code} />
                 ))}
-              </select>
+              </datalist>
               <input id="phone" name="phone" type="tel" placeholder="315 983 6331" />
             </div>
 
