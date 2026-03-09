@@ -113,7 +113,14 @@ h6,
 
 @media (max-width: 860px) {
   .dark-veil-canvas {
-    filter: brightness(0.74) saturate(0.9);
+    filter: brightness(0.72) saturate(0.92);
+  }
+
+  .veil-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 7, 16, 0.26);
   }
 }
 
@@ -2676,32 +2683,6 @@ footer .container {
 .hp-stepper-shell {
   border-color: var(--card-unified-border);
   background: var(--card-unified-bg);
-}
-
-@media (max-width: 860px) {
-  :root {
-    --card-unified-bg: linear-gradient(165deg, rgba(18, 24, 42, 0.72), rgba(10, 14, 28, 0.66));
-    --card-unified-border: rgba(194, 222, 255, 0.22);
-  }
-
-  .metric,
-  .panel,
-  .card,
-  .hp-stage-card,
-  .hp-pillar,
-  .hp-funnel-card,
-  .hp-trend-card,
-  .hp-compare,
-  .hp-metrics-card,
-  .hp-service-main,
-  .hp-deliverables,
-  .hp-stepper-shell,
-  .contact-quick-item {
-    border-color: var(--card-unified-border);
-    background: var(--card-unified-bg);
-    backdrop-filter: blur(15px) saturate(132%);
-    -webkit-backdrop-filter: blur(15px) saturate(132%);
-  }
 }
 
 .hp-stepper-indicators {
